@@ -16,13 +16,24 @@ class Header extends Component {
         );
       default:
         return [
-          <li key={1}>
+          <li key="4">
+            <a
+              href={
+                this.props.auth.role === "admin"
+                  ? "/admin/dashboard"
+                  : "/client/dashboard"
+              }
+            >
+              Dashboard
+            </a>
+          </li>,
+          <li key="1">
             <Payments />
           </li>,
-          <li key={3} style={{ margin: "0 10px" }}>
+          <li key="3" style={{ margin: "0 10px" }}>
             Credits: {this.props.auth.credits}
           </li>,
-          <li key={2}>
+          <li key="2">
             <a href="/api/logout">Logout</a>
           </li>
         ];
@@ -32,10 +43,7 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <Link
-            to={this.props.auth ? "/surveys" : "/"}
-            className="left brand-logo"
-          >
+          <Link to="/" className="left brand-logo">
             deliveryPro
           </Link>
           <ul className="right">{this.renderContent()}</ul>

@@ -4,7 +4,8 @@ const Landing = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>DeliveryPro</h1>
-      Deliver Everywhere
+      <h2>Landing Page</h2>
+      <p>The client and the admin see the same page</p>
     </div>
   );
 };

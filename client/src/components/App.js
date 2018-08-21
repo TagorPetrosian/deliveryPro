@@ -5,7 +5,10 @@ import * as actions from "../actions";
 
 import Header from "./Header";
 import Landing from "./Landing";
-const Dashboard = () => <h2>Dashboard</h2>;
+const ClientDashboard = () => <h2>ClientDashboard</h2>;
+const DriverDashboard = () => <h2>DriverDashboard</h2>;
+const AdminDashboard = () => <h2>AdminDashboard</h2>;
+
 const SurveyNew = () => <h2>SurveyNew</h2>;
 
 class App extends Component {
@@ -19,7 +22,9 @@ class App extends Component {
           <div>
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route path="/surveys" component={Dashboard} />
+            <Route path="/client/dashboard" component={ClientDashboard} />
+            <Route path="/admin/dashboard" component={AdminDashboard} />
+            <Route path="/driver/dashboard" component={DriverDashboard} />
             <Route path="/surveys/new" component={SurveyNew} />
           </div>
         </BrowserRouter>
