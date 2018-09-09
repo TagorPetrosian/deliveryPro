@@ -12,7 +12,10 @@ module.exports = app => {
     "/auth/google/callback",
     passport.authenticate("google"),
     (req, res) => {
-      res.redirect("/");
+      if (req.user.role === "admin") {
+        return res.redirect("/admin/dashboard");
+      }
+      res.redirect("/client/dashboard");
     }
   );
 
