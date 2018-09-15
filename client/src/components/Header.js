@@ -42,8 +42,11 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper #0d47a1 blue darken-4">
           <Link to="/" className="left brand-logo">
+            <i className="material-icons" style={{ margin: "0 10px" }}>
+              local_shipping
+            </i>
             deliveryPro
           </Link>
           <ul className="right">{this.renderContent()}</ul>

@@ -1,9 +1,24 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const AdressSchema = require("./Address");
+const VolumeSchema = require("./Volume");
 
 const orderSchema = new Schema({
-  title: String
-  // _user: { type: Schema.Types.ObjectId, ref: "User" }
+  description: String,
+  _user: { type: Schema.Types.ObjectId, ref: "User" },
+  origin: AdressSchema,
+  destination: AdressSchema,
+  recieved: Boolean,
+  delivered: Boolean,
+  returned: Boolean,
+  damaged: Boolean,
+  lost: Boolean,
+  volume: VolumeSchema,
+  dateOrdered: Date,
+  dateRecieved: Date,
+  dateDelivered: Date
 });
 
-mongoose.model("orders", orderSchema);
+mongoose.model("Order", orderSchema);
+
+module.exports = orderSchema;
