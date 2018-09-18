@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/materialize-css": "^1.0.4",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.1",
