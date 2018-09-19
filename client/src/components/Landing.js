@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
+import img1 from "../images/container.jpg";
+import img2 from "../images/ikea.jpg";
+import img3 from "../images/industrial.jpg";
 
 export default class Landing extends Component {
   componentDidMount() {
@@ -20,40 +23,21 @@ export default class Landing extends Component {
         <div className="slider">
           <ul className="slides">
             <li>
-              <img
-                className="responsive-img"
-                src="https://images.pexels.com/photos/590839/pexels-photo-590839.jpeg?cs=srgb&dl=action-automotive-cargo-container-590839.jpg&fm=jpg"
-                alt="test"
-              />
+              <img className="responsive-img" src={img1} alt="container" />
               <div className="caption center-align">
-                <h3 className="black-text">Center Caption</h3>
-                <h5 className="black-text">Lorem ipsum dolor sit amet.</h5>
+                <h3>FIRST CLASS LOGISTICS</h3>
               </div>
             </li>
             <li>
-              <img
-                className="responsive-img"
-                src="https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                alt="test"
-              />
+              <img className="responsive-img" src={img2} alt="ikea" />
               <div className="caption left-align">
-                <h3>Left Align Caption</h3>
-                <h5 className="light grey-text text-lighten-3">
-                  Lorem ipsum dolor sit amet.
-                </h5>
+                <h3 className="dark-text">FIRST CLASS DELIVERY</h3>
               </div>
             </li>
             <li>
-              <img
-                className="responsive-img"
-                src="https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                alt="test"
-              />
+              <img className="responsive-img" src={img3} alt="industrial" />
               <div className="caption right-align">
-                <h3>Right Align Caption</h3>
-                <h5 className="light grey-text text-lighten-3">
-                  Lorem ipsum dolor sit amet.
-                </h5>
+                <h3>FAST AND SECURE DELIVERY</h3>
               </div>
             </li>
           </ul>
