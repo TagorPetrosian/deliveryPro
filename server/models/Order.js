@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-const AdressSchema = require("./Address");
+const AddressSchema = require("./Address");
 const VolumeSchema = require("./Volume");
 
 const orderSchema = new Schema({
   description: String,
   _user: { type: Schema.Types.ObjectId, ref: "User" },
-  origin: AdressSchema,
+  origin: AddressSchema,
   destination: AdressSchema,
   recieved: Boolean,
   delivered: Boolean,
