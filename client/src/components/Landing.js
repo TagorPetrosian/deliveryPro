@@ -3,6 +3,8 @@ import M from "materialize-css/dist/js/materialize.min.js";
 import img1 from "../images/container.jpg";
 import img2 from "../images/ikea.jpg";
 import img3 from "../images/industrial.jpg";
+import car1 from "../images/car1.jpg";
+import "./Landing.css";
 
 export default class Landing extends Component {
   componentDidMount() {
@@ -17,9 +19,6 @@ export default class Landing extends Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        {/* <h1>DeliveryPro</h1>
-        <h2>Landing Page</h2>
-        <p>The client and the admin see the same page</p> */}
         <div className="slider">
           <ul className="slides">
             <li>
@@ -41,6 +40,30 @@ export default class Landing extends Component {
               </div>
             </li>
           </ul>
+        </div>
+        <div className="row">
+          <div className="col s6">
+            {/* Fix img size, consider responsivenes */}
+            <img src={car1} />
+          </div>
+          <div className="col s6">
+            <h3 className="right-align">SAFTY & SECURITY</h3>
+            <p className="p1 left-align">
+              Cozy sphinx waves quart jug of bad milk. A very bad quack might
+              jinx zippy fowls. Few quips galvanized the mock jury box. Quick
+              brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and
+              my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin
+              Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps
+              quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game.
+              Woven silk pyjamas exchanged for blue quartz. Brawny gods just
+            </p>
+            <p className="p2 left-align">
+              Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to
+              vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV
+              quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny
+              gods just.
+            </p>
+          </div>
         </div>
       </div>
     );
