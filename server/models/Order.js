@@ -7,7 +7,7 @@ const orderSchema = new Schema({
   description: String,
   _user: { type: Schema.Types.ObjectId, ref: "User" },
   origin: AddressSchema,
-  destination: AdressSchema,
+  destination: AddressSchema,
   recieved: Boolean,
   delivered: Boolean,
   returned: Boolean,
