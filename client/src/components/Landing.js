@@ -43,8 +43,7 @@ export default class Landing extends Component {
         </div>
         <div className="row">
           <div className="col s6">
-            {/* Fix img size, consider responsivenes */}
-            <img src={car1} />
+            <img src={car1} className="responsive-img" />
           </div>
           <div className="col s6">
             <h3 className="right-align">SAFTY & SECURITY</h3>
