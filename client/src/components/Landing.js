@@ -6,6 +6,7 @@ import img3 from "../images/industrial.jpg";
 import car1 from "../images/car1.jpg";
 import "./Landing.css";
 
+//test
 export default class Landing extends Component {
   componentDidMount() {
     var elem = document.querySelector(".slider");
