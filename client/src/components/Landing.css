@@ -4,3 +4,67 @@
   width: 100%;
   table-layout: fixed;
 } */
+#about {
+  position: relative;
+  display: table;
+  width: 100%;
+}
+
+#about > div {
+  display: table-cell;
+  width: 50%;
+  height: 500px;
+}
+
+#about .left-box-wrapper {
+  background: url(../images/bg1.jpg) right center no-repeat;
+  background-size: cover;
+}
+
+#about .right-box-wrapper {
+  background: url(../images/bg2.jpg) right center no-repeat;
+  background-size: cover;
+}
+
+.ul0 {
+  padding: 0;
+  margin: 0 0 0 -38px;
+  list-style: none;
+}
+
+li {
+  display: list-item;
+  position: relative;
+}
+
+.ul0 li:first-child {
+  margin-top: 0;
+}
+
+.txt1 {
+  font-weight: bold;
+}
+
+.txt2 {
+  font-weight: 500;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.ul0 li {
+  list-style: none;
+  display: block;
+  margin-top: 40px;
+}
+
+.icon {
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.slider-text {
+  font-weight: 600;
+  text-transform: uppercase;
+}
