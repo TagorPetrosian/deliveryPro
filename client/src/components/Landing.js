@@ -4,9 +4,9 @@ import img1 from "../images/container.jpg";
 import img2 from "../images/ikea.jpg";
 import img3 from "../images/industrial.jpg";
 import car1 from "../images/car1.jpg";
+import big1 from "../images/big1.jpg";
 import "./Landing.css";
 
-//test
 export default class Landing extends Component {
   componentDidMount() {
     var elem = document.querySelector(".slider");
@@ -41,6 +41,29 @@ export default class Landing extends Component {
               </div>
             </li>
           </ul>
+        </div>
+        <div className="row">
+          <div className="col s6">
+            <h3 className="left-align">THE TRUCKING BRAND</h3>
+            <p className="p1 left-align">
+              Cozy sphinx waves quart jug of bad milk. A very bad quack might
+              jinx zippy fowls. Few quips galvanized the mock jury box. Quick
+              brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and
+              my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin
+              Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps
+              quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game.
+              Woven silk pyjamas exchanged for blue quartz. Brawny gods just
+            </p>
+            <p className="p2 left-align">
+              Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to
+              vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV
+              quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny
+              gods just.
+            </p>
+          </div>
+          <div className="col s6">
+            <img src={big1} className="responsive-img" />
+          </div>
         </div>
         <div className="row">
           <div className="col s6">
