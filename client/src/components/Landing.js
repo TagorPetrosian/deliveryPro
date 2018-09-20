@@ -47,7 +47,7 @@ export default class Landing extends Component {
           </div>
           <div className="col s6">
             <h3 className="right-align">SAFTY & SECURITY</h3>
-            <p className="p1 left-align">
+            <p className="p1 right-align">
               Cozy sphinx waves quart jug of bad milk. A very bad quack might
               jinx zippy fowls. Few quips galvanized the mock jury box. Quick
               brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and
@@ -56,7 +56,7 @@ export default class Landing extends Component {
               quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game.
               Woven silk pyjamas exchanged for blue quartz. Brawny gods just
             </p>
-            <p className="p2 left-align">
+            <p className="p2 right-align">
               Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to
               vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV
               quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny
