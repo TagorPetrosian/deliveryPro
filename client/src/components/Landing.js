@@ -67,7 +67,7 @@ export default class Landing extends Component {
             </p>
           </div>
           <div className="col s6">
-            <img src={big1} className="responsive-img" />
+            <img src={big1} className="responsive-img" alt="containers" />
           </div>
         </div>
         <div className="row">
@@ -78,7 +78,7 @@ export default class Landing extends Component {
                 <h3 className="white-text">WHY CHOOSE US</h3>
                 <ul className="ul0">
                   <li className="clearfix">
-                    <img src={icon1} className="circle white icon" />
+                    <img src={icon1} className="circle white icon" alt="icon" />
                     <div className="caption left-align">
                       <div className="txt1 white-text">
                         Fast Transportion Service
@@ -91,7 +91,7 @@ export default class Landing extends Component {
                     </div>
                   </li>
                   <li className="clearfix">
-                    <img src={icon2} className="circle white icon" />
+                    <img src={icon2} className="circle white icon" alt="icon" />
                     <div className="caption left-align">
                       <div className="txt1 white-text">
                         Safety and Reliability
@@ -104,7 +104,7 @@ export default class Landing extends Component {
                     </div>
                   </li>
                   <li className="clearfix">
-                    <img src={icon3} className="circle white icon" />
+                    <img src={icon3} className="circle white icon" alt="icon" />
                     <div className="caption left-align">
                       <div className="txt1 white-text">Shipping Worldwide</div>
                       <div className="txt2 white-text">
@@ -115,7 +115,7 @@ export default class Landing extends Component {
                     </div>
                   </li>
                   <li className="clearfix">
-                    <img src={icon4} className="circle white icon" />
+                    <img src={icon4} className="circle white icon" alt="icon" />
                     <div className="caption left-align">
                       <div className="txt1 white-text">
                         Fast Transportion Service
@@ -134,7 +134,7 @@ export default class Landing extends Component {
         </div>
         <div className="row">
           <div className="col s6">
-            <img src={car1} className="responsive-img" />
+            <img src={car1} className="responsive-img" alt="Truck" />
           </div>
           <div className="col s6">
             <h3 className="right-align">SAFETY & SECURITY</h3>
@@ -175,7 +175,7 @@ export default class Landing extends Component {
             </p>
           </div>
           <div className="col s6">
-            <img src={car2} className="responsive-img" />
+            <img src={car2} className="responsive-img" alt="Truck" />
           </div>
         </div>
       </div>
