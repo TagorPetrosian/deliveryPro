@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-
 import Landing from "./Landing";
-const ClientDashboard = () => <h2>ClientDashboard</h2>;
+import ClientDashboard from "./ClientDashboard";
+
 const DriverDashboard = () => <h2>DriverDashboard</h2>;
 const AdminDashboard = () => <h2>AdminDashboard</h2>;
-
-const SurveyNew = () => <h2>SurveyNew</h2>;
 
 class App extends Component {
   componentDidMount() {
@@ -16,7 +14,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div>
         <BrowserRouter>
           <div>
             <Route exact path="/" component={Landing} />

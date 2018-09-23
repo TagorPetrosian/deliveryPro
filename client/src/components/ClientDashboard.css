@@ -1,0 +1,15 @@
+#slide-out {
+  margin-top: 65px;
+}
+
+.collapsible-body {
+  background-color: #448aff;
+}
+.collapsible-body li {
+  padding-left: 40px;
+  background-color: #448aff;
+}
+
+.sidenav {
+  background-color: #448aff;
+}

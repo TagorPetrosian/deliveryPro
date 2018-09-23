@@ -47,7 +47,6 @@ class Header extends Component {
             <i className="material-icons" style={{ margin: "0 10px" }}>
               local_shipping
             </i>
-            deliveryPro
           </Link>
           <ul className="right">{this.renderContent()}</ul>
         </div>
