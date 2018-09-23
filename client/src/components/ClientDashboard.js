@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import OrderNew from "./orders/OrderNew";
 import Header from "./Header";
 import M from "materialize-css/dist/js/materialize.min.js";
 import "./ClientDashboard.css";
@@ -27,10 +30,12 @@ export default class ClientDashboard extends Component {
           <li>
             <div className="collapsible-header">
               <i className="material-icons">filter_drama</i>
-              First
+              Orders
             </div>
             <ul className="collapsible-body">
-              <li>1</li>
+              <li>
+                <Link to="/client/dashboard/orders/new">New Order</Link>
+              </li>
               <li>1</li>
               <li>1</li>
               <li>1</li>
