@@ -2,6 +2,11 @@ import _ from "lodash";
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  geocodeByPlaceId,
+  getLatLng
+} from "react-places-autocomplete";
 import OrderField from "./OrderField";
 import formFields from "./orderFormFields";
 import validateVolume from "../../utils/validateVolume";

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import OrderNew from "./orders/OrderNew";
 import Header from "./Header";
 import M from "materialize-css/dist/js/materialize.min.js";
 import "./ClientDashboard.css";
@@ -66,7 +65,11 @@ export default class ClientDashboard extends Component {
             </ul>
           </li>
         </ul>
-        <a href="#" data-target="slide-out" className="sidenav-trigger">
+        <a
+          href="/client/dashboard"
+          data-target="slide-out"
+          className="sidenav-trigger"
+        >
           <i className="material-icons">menu</i>
         </a>
       </div>
