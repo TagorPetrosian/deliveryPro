@@ -7,6 +7,8 @@ import reduxThunk from "redux-thunk";
 
 import App from "./components/App";
 import reducers from "./reducers";
+import axios from "axios";
+window.axios = axios;
 
 /* The Provider tag is a react component that knows how
    to read changes from our redux store anytime the redux

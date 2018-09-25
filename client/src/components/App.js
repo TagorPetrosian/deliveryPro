@@ -5,6 +5,7 @@ import * as actions from "../actions";
 import Landing from "./Landing";
 import ClientDashboard from "./ClientDashboard";
 import OrderNew from "./orders/OrderNew";
+import OrdersIndex from "./orders/OrdersIndex";
 
 const DriverDashboard = () => <h2>DriverDashboard</h2>;
 const AdminDashboard = () => <h2>AdminDashboard</h2>;
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path="/admin/dashboard" component={AdminDashboard} />
             <Route path="/driver/dashboard" component={DriverDashboard} />
             <Route path="/client/dashboard/orders/new" component={OrderNew} />
+            <Route path="/client/dashboard/orders" component={OrdersIndex} />
           </div>
         </BrowserRouter>
       </div>

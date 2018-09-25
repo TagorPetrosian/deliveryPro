@@ -31,4 +31,10 @@ module.exports = app => {
       res.status(422).send(err);
     }
   });
+
+  app.get("/api/orders", requireLogin, async (req, res) => {
+    const orders = await Order.find({ _user: req.user.id });
+
+    res.send(orders);
+  });
 };
