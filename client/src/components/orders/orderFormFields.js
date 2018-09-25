@@ -18,6 +18,6 @@ export default [
     label: "Volume",
     name: "volume",
     noValueError:
-      "Please provide length, width, height separated by comma and a space example : (2, 3, 4)"
+      "Please provide length, width, height separated by comma and a space. For example : 2, 3, 4"
   }
 ];

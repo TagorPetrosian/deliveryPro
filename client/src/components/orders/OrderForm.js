@@ -2,34 +2,59 @@ import _ from "lodash";
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  geocodeByPlaceId,
-  getLatLng
-} from "react-places-autocomplete";
 import OrderField from "./OrderField";
-import formFields from "./orderFormFields";
+import LocationSearchInput from "../LocationSearchInput";
 import validateVolume from "../../utils/validateVolume";
+import formFields from "./orderFormFields";
 
 class OrderForm extends Component {
-  renderFields() {
-    return _.map(formFields, ({ label, name }) => {
-      return (
-        <Field
-          key={name}
-          component={OrderField}
-          type="text"
-          label={label}
-          name={name}
-        />
-      );
-    });
-  }
+  // renderFields() {
+  //   return _.map(formFields, ({ label, name }) => {
+  //     return (
+  //       <Field
+  //         key={name}
+  //         component={OrderField}
+  //         type="text"
+  //         label={label}
+  //         name={name}
+  //       />
+  //     );
+  //   });
+  // }
   render() {
     return (
       <div className="container">
         <form onSubmit={this.props.handleSubmit(this.props.onOrderSubmit)}>
-          {this.renderFields()}
+          {/* {this.renderFields()} */}
+          <Field
+            key="description"
+            component={OrderField}
+            type="text"
+            label="Description"
+            name="description"
+          />
+          <Field
+            key="origin"
+            component={OrderField}
+            type="text"
+            label="Origin"
+            name="origin"
+          />
+          <Field
+            key="destination"
+            component={OrderField}
+            type="text"
+            label="Destination"
+            name="destination"
+          />
+          <Field
+            key="volume"
+            component={OrderField}
+            type="text"
+            label="Volume"
+            name="volume"
+            placeholder="For example 2, 3, 4"
+          />
           <Link to="/client/dashboard" className="red btn-flat white-text">
             <i className="material-icons left">navigate_before</i>
             Cancel
@@ -44,22 +69,23 @@ class OrderForm extends Component {
   }
 }
 
-function validate(values) {
-  const errors = {};
+// function validate(values) {
+//   const errors = {};
+//   console.log(values);
 
-  errors.volume = validateVolume(values.recipients || "");
+//   // errors.volume = validateVolume(values.recipients || "");
 
-  _.each(formFields, ({ name, noValueError }) => {
-    if (!values[name]) {
-      errors[name] = noValueError;
-    }
-  });
+//   _.each(formFields, ({ name, noValueError }) => {
+//     if (!values[name]) {
+//       errors[name] = noValueError;
+//     }
+//   });
 
-  return errors;
-}
+//   return errors;
+// }
 
 export default reduxForm({
-  validate,
+  // validate,
   form: "orderForm",
   destroyOnUnmount: false
 })(OrderForm);

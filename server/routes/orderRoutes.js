@@ -6,7 +6,7 @@ const Order = mongoose.model("Order");
 
 module.exports = app => {
   app.get("/api/order/thanks", (req, res) => {
-    res.send("Thanks for voting!");
+    res.send("Thank you for ordering");
   });
 
   app.post("/api/orders", requireLogin, requireCredits, async (req, res) => {
