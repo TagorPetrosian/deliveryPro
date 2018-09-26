@@ -21,6 +21,7 @@ const OrderFormReview = ({ onCancel, formValues, submitOrder, history }) => {
       <button
         className="yellow darken-3 btn-flat white-text"
         onClick={onCancel}
+        style={{ marginTop: "20px" }}
       >
         <i className="material-icons left">navigate_before</i>
         Back
@@ -28,6 +29,7 @@ const OrderFormReview = ({ onCancel, formValues, submitOrder, history }) => {
       <button
         onClick={() => submitOrder(formValues, history)}
         className="green btn-flat right white-text"
+        style={{ marginTop: "20px" }}
       >
         Send
         <i className="material-icons right">email</i>
