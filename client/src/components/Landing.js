@@ -25,9 +25,9 @@ export default class Landing extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div>
         <Header />
-        <div style={{ textAlign: "center" }}>
+        <div className="container" style={{ textAlign: "center" }}>
           <div className="slider">
             <ul className="slides">
               <li>
