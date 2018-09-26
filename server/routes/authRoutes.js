@@ -15,7 +15,7 @@ module.exports = app => {
       if (req.user.role === "admin") {
         return res.redirect("/admin/dashboard");
       }
-      res.redirect("/client/dashboard");
+      res.redirect("/client/dashboard/orders");
     }
   );
 

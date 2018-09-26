@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_USER } from "./types";
+import { FETCH_USER, FETCH_ORDERS } from "./types";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
@@ -18,4 +18,9 @@ export const submitOrder = (values, history) => async dispatch => {
 
   history.push("/client/dashboard");
   dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const fetchOrders = () => async dispatch => {
+  const res = await axios.get("/api/orders");
+  dispatch({ type: FETCH_ORDERS, payload: res.data });
 };

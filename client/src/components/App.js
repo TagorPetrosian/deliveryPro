@@ -24,7 +24,11 @@ class App extends Component {
             <Route path="/admin/dashboard" component={AdminDashboard} />
             <Route path="/driver/dashboard" component={DriverDashboard} />
             <Route path="/client/dashboard/orders/new" component={OrderNew} />
-            <Route path="/client/dashboard/orders" component={OrdersIndex} />
+            <Route
+              exact
+              path="/client/dashboard/orders"
+              component={OrdersIndex}
+            />
           </div>
         </BrowserRouter>
       </div>
