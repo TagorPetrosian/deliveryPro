@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchOrders } from "../../actions";
 
@@ -39,6 +40,14 @@ class OrdersIndex extends Component {
           </thead>
           <tbody>{this.renderOrders()}</tbody>
         </table>
+        <div className="fixed-action-btn">
+          <Link
+            to="/client/dashboard/orders/new"
+            className="btn-floating btn-large red"
+          >
+            <i className="large material-icons">add</i>
+          </Link>
+        </div>
       </div>
     );
   }

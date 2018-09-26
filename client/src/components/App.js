@@ -6,6 +6,7 @@ import Landing from "./Landing";
 import ClientDashboard from "./ClientDashboard";
 import OrderNew from "./orders/OrderNew";
 import OrdersIndex from "./orders/OrdersIndex";
+import OrderThanks from "./orders/OrderThanks";
 
 const DriverDashboard = () => <h2>DriverDashboard</h2>;
 const AdminDashboard = () => <h2>AdminDashboard</h2>;
@@ -28,6 +29,11 @@ class App extends Component {
               exact
               path="/client/dashboard/orders"
               component={OrdersIndex}
+            />
+            <Route
+              exact
+              path="/client/dashboard/thanks"
+              component={OrderThanks}
             />
           </div>
         </BrowserRouter>

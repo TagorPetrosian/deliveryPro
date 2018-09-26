@@ -55,11 +55,19 @@ class OrderForm extends Component {
             name="volume"
             placeholder="For example 2, 3, 4"
           />
-          <Link to="/client/dashboard" className="red btn-flat white-text">
+          <Link
+            to="/client/dashboard/orders"
+            className="red btn-flat white-text"
+            style={{ width: "120px" }}
+          >
             <i className="material-icons left">navigate_before</i>
             Cancel
           </Link>
-          <button type="submit" className="teal btn-flat right white-text">
+          <button
+            type="submit"
+            className="teal btn-flat right white-text"
+            style={{ width: "120px" }}
+          >
             Next
             <i className="material-icons right">navigate_next</i>
           </button>
@@ -69,23 +77,23 @@ class OrderForm extends Component {
   }
 }
 
-// function validate(values) {
-//   const errors = {};
-//   console.log(values);
+function validate(values) {
+  const errors = {};
+  console.log(values);
 
-//   // errors.volume = validateVolume(values.recipients || "");
+  // errors.volume = validateVolume(values.recipients || "");
 
-//   _.each(formFields, ({ name, noValueError }) => {
-//     if (!values[name]) {
-//       errors[name] = noValueError;
-//     }
-//   });
+  _.each(formFields, ({ name, noValueError }) => {
+    if (!values[name]) {
+      errors[name] = noValueError;
+    }
+  });
 
-//   return errors;
-// }
+  return errors;
+}
 
 export default reduxForm({
-  // validate,
+  validate,
   form: "orderForm",
   destroyOnUnmount: false
 })(OrderForm);

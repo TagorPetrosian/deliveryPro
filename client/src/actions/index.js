@@ -16,7 +16,7 @@ export const handleToken = token => async dispatch => {
 export const submitOrder = (values, history) => async dispatch => {
   const res = await axios.post("/api/orders", values);
 
-  history.push("/client/dashboard");
+  history.push("/client/dashboard/thanks");
   dispatch({ type: FETCH_USER, payload: res.data });
 };
 

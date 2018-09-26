@@ -27,44 +27,13 @@ export default class ClientDashboard extends Component {
 
         <ul id="slide-out" className="sidenav sidenav-fixed collapsible">
           <li>
-            <div className="collapsible-header">
-              <i className="material-icons">filter_drama</i>
-              Orders
-            </div>
-            <ul className="collapsible-body">
-              <li>
-                <Link to="/client/dashboard/orders/new">New Order</Link>
-              </li>
-              <li>
-                <Link to="/client/dashboard/orders">View Orders</Link>
-              </li>
-              <li>1</li>
-              <li>1</li>
-            </ul>
+            <Link to="/client/dashboard/orders/new">New Order</Link>
           </li>
           <li>
-            <div className="collapsible-header">
-              <i className="material-icons">place</i>
-              Second
-            </div>
-            <ul className="collapsible-body">
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-            </ul>
+            <Link to="/client/dashboard/orders">View Orders</Link>
           </li>
           <li>
-            <div className="collapsible-header">
-              <i className="material-icons">whatshot</i>
-              Third
-            </div>
-            <ul className="collapsible-body">
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-            </ul>
+            <Link to="/client/dashboard/orders">Reports</Link>
           </li>
         </ul>
         <a

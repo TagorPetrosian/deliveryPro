@@ -17,6 +17,9 @@ class Header extends Component {
       default:
         return [
           <li key="4">
+            <a href="/">Home</a>
+          </li>,
+          <li key="5">
             <a
               href={
                 this.props.auth.role === "admin"
