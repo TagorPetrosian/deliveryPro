@@ -10,6 +10,7 @@ import OrderThanks from "./orders/OrderThanks";
 import AdminDashboard from "./AdminDashboard";
 import OrdersAll from "./orders/OrdersAll";
 import AdminMetrics from "./AdminMetrics";
+import ClientIndex from "./users/ClientIndex";
 
 class App extends Component {
   componentDidMount() {
@@ -33,6 +34,11 @@ class App extends Component {
               exact
               path="/admin/dashboard/orders_all"
               component={OrdersAll}
+            />
+            <Route
+              exact
+              path="/admin/dashboard/clients"
+              component={ClientIndex}
             />
             <Route
               exact

@@ -1,10 +1,21 @@
 import axios from "axios";
-import { FETCH_USER, FETCH_ORDERS, FETCH_ALL_ORDERS } from "./types";
+import {
+  FETCH_USER,
+  FETCH_ORDERS,
+  FETCH_ALL_ORDERS,
+  FETCH_CLIENTS
+} from "./types";
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get("/api/current_user");
 
   dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const fetchUsers = () => async dispatch => {
+  const res = await axios.get("/admin/api/clients");
+
+  dispatch({ type: FETCH_CLIENTS, payload: res.data });
 };
 
 export const handleToken = token => async dispatch => {

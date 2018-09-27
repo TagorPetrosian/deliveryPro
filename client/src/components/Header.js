@@ -23,7 +23,7 @@ class Header extends Component {
             <a
               href={
                 this.props.auth.role === "admin"
-                  ? "/admin/dashboard"
+                  ? "/admin/dashboard/metrics"
                   : "/client/dashboard/orders"
               }
             >

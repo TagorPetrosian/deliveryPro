@@ -41,7 +41,9 @@ export default class AdminDashboard extends Component {
             </div>
             <ul className="collapsible-body">
               <li>Update</li>
-              <li>View</li>
+              <li>
+                <Link to="/admin/dashboard/clients">View Orders</Link>
+              </li>
             </ul>
           </li>
           <li>

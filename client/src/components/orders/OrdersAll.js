@@ -29,7 +29,7 @@ class OrdersAll extends Component {
     return (
       <div className="container">
         <h3 className="center-align">Orders</h3>
-        <table className="striped responsive-table">
+        <table className="striped responsive-table center-align">
           <thead>
             <tr>
               <th>Origin</th>

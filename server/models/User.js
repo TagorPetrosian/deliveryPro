@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const OrderSchema = require("./Order");
-const AddressSchema = require("./Address");
 
 const userSchema = new Schema({
   googleId: String,
   credits: { type: Number, default: 0 },
-  role: String,
+  role: { type: String, default: "client" },
   company: String,
-  address: AddressSchema,
-  contactPhone: String, // should be num? + how to validate israeli phone
+  address: String,
+  contactPhone: String,
+  fullName: String, // should be num? + how to validate israeli phone
   orders: [OrderSchema]
 });
 

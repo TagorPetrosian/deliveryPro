@@ -19,7 +19,7 @@ class AdminHeader extends Component {
             <a href="/">Home</a>
           </li>,
           <li key="5">
-            <a href="/admin/dashboard">Dashboard</a>
+            <a href="/admin/dashboard/metrics">Dashboard</a>
           </li>,
           <li key="2">
             <a href="/api/logout">Logout</a>
