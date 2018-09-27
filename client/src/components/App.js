@@ -7,9 +7,7 @@ import ClientDashboard from "./ClientDashboard";
 import OrderNew from "./orders/OrderNew";
 import OrdersIndex from "./orders/OrdersIndex";
 import OrderThanks from "./orders/OrderThanks";
-
-const DriverDashboard = () => <h2>DriverDashboard</h2>;
-const AdminDashboard = () => <h2>AdminDashboard</h2>;
+import AdminDashboard from "./AdminDashboard";
 
 class App extends Component {
   componentDidMount() {
@@ -23,7 +21,6 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route path="/client/dashboard" component={ClientDashboard} />
             <Route path="/admin/dashboard" component={AdminDashboard} />
-            <Route path="/driver/dashboard" component={DriverDashboard} />
             <Route path="/client/dashboard/orders/new" component={OrderNew} />
             <Route
               exact

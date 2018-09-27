@@ -28,6 +28,7 @@ class OrdersIndex extends Component {
   render() {
     return (
       <div className="container">
+        <h3 className="center-align">Orders</h3>
         <table className="striped responsive-table">
           <thead>
             <tr>
