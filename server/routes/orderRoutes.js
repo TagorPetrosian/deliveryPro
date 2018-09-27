@@ -32,6 +32,11 @@ module.exports = app => {
     }
   });
 
+  app.get("/admin/api/all_orders", requireLogin, async (req, res) => {
+    const orders = await Order.find({});
+
+    res.send(orders);
+  });
   app.get("/api/orders", requireLogin, async (req, res) => {
     const orders = await Order.find({ _user: req.user.id });
 
