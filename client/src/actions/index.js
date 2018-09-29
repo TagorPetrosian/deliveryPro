@@ -3,7 +3,8 @@ import {
   FETCH_USER,
   FETCH_ORDERS,
   FETCH_ALL_ORDERS,
-  FETCH_CLIENTS
+  FETCH_CLIENTS,
+  FETCH_TRUCKS
 } from "./types";
 
 export const fetchUser = () => async dispatch => {
@@ -39,4 +40,16 @@ export const fetchOrders = () => async dispatch => {
 export const fetchAllOrders = () => async dispatch => {
   const res = await axios.get("/admin/api/all_orders");
   dispatch({ type: FETCH_ALL_ORDERS, payload: res.data });
+};
+
+export const submitTruck = (values, history) => async dispatch => {
+  const res = await axios.post("/api/trucks", values);
+
+  history.push("/admin/dashboard/thanks");
+  dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const fetchTrucks = () => async dispatch => {
+  const res = await axios.get("/api/trucks");
+  dispatch({ type: FETCH_TRUCKS, payload: res.data });
 };

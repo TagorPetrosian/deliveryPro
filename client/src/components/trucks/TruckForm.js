@@ -2,12 +2,12 @@ import _ from "lodash";
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
-import OrderField from "./OrderField";
+import TruckField from "./TruckField";
 import LocationSearchInput from "../LocationSearchInput";
 import validateVolume from "../../utils/validateVolume";
-import formFields from "./orderFormFields";
+import formFields from "./truckFormFields";
 
-class OrderForm extends Component {
+class TruckForm extends Component {
   // renderFields() {
   //   return _.map(formFields, ({ label, name }) => {
   //     return (
@@ -24,39 +24,25 @@ class OrderForm extends Component {
   render() {
     return (
       <div className="container">
-        <form onSubmit={this.props.handleSubmit(this.props.onOrderSubmit)}>
-          {/* {this.renderFields()} */}
+        <form onSubmit={this.props.handleSubmit(this.props.onTruckSubmit)}>
           <Field
-            key="description"
-            component={OrderField}
+            key="model"
+            component={TruckField}
             type="text"
-            label="Description"
-            name="description"
-          />
-          <Field
-            key="origin"
-            component={OrderField}
-            type="text"
-            label="Origin"
-            name="origin"
-          />
-          <Field
-            key="destination"
-            component={OrderField}
-            type="text"
-            label="Destination"
-            name="destination"
+            label="Model"
+            name="model"
+            placeholder="ISUZU"
           />
           <Field
             key="volume"
-            component={OrderField}
+            component={TruckField}
             type="text"
             label="Volume"
             name="volume"
-            placeholder="For example 24"
+            placeholder="For example 240"
           />
           <Link
-            to="/client/dashboard/orders"
+            to="/admin/dashboard/trucks"
             className="red btn-flat white-text"
             style={{ width: "120px" }}
           >
@@ -98,6 +84,6 @@ function validate(values) {
 
 export default reduxForm({
   validate,
-  form: "orderForm",
+  form: "truckForm",
   destroyOnUnmount: false
-})(OrderForm);
+})(TruckForm);

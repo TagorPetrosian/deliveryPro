@@ -13,7 +13,7 @@ const orderSchema = new Schema({
   returned: { type: Boolean, default: false },
   damaged: { type: Boolean, default: false },
   lost: { type: Boolean, default: false },
-  volume: String,
+  volume: Number,
   dateOrdered: Date,
   dateRecieved: Date,
   dateDelivered: Date

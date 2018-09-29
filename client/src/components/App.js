@@ -11,6 +11,7 @@ import AdminDashboard from "./AdminDashboard";
 import OrdersAll from "./orders/OrdersAll";
 import AdminMetrics from "./AdminMetrics";
 import ClientIndex from "./users/ClientIndex";
+import TruckNew from "./trucks/TruckNew";
 
 class App extends Component {
   componentDidMount() {
@@ -25,6 +26,8 @@ class App extends Component {
             <Route path="/client/dashboard" component={ClientDashboard} />
             <Route path="/admin/dashboard" component={AdminDashboard} />
             <Route path="/client/dashboard/orders/new" component={OrderNew} />
+            <Route path="/admin/dashboard/trucks/new" component={TruckNew} />
+
             <Route
               exact
               path="/client/dashboard/orders"
