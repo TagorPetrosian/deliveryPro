@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { fetchUsers } from "../../actions";
 
 class ClientsIndex extends Component {
@@ -21,6 +22,11 @@ class ClientsIndex extends Component {
           <td>{user.company}</td>
           <td>{user.address}</td>
           <td>{user.contactPhone}</td>
+          <td>
+            <Link to={`/admin/dashboard/clients/${user._id}`}>
+              <i className="material-icons">create</i>
+            </Link>
+          </td>
         </tr>
       );
     });
@@ -38,6 +44,7 @@ class ClientsIndex extends Component {
               <th>Company</th>
               <th>Address</th>
               <th>Phone</th>
+              <th>Edit</th>
             </tr>
           </thead>
           <tbody>{this.renderClients()}</tbody>

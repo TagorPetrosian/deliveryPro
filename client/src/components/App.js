@@ -14,6 +14,7 @@ import ClientIndex from "./users/ClientIndex";
 import TruckNew from "./trucks/TruckNew";
 import TrucksIndex from "./trucks/TrucksIndex";
 import DriverIndex from "./drivers/DriverIndex";
+import ClientUpdate from "./users/ClientUpdate";
 
 class App extends Component {
   componentDidMount() {
@@ -49,6 +50,11 @@ class App extends Component {
               exact
               path="/admin/dashboard/orders_all"
               component={OrdersAll}
+            />
+            <Route
+              exact
+              path="/admin/dashboard/clients/:id"
+              component={ClientUpdate}
             />
             <Route
               exact

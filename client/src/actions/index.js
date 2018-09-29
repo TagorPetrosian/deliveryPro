@@ -5,7 +5,8 @@ import {
   FETCH_ALL_ORDERS,
   FETCH_CLIENTS,
   FETCH_TRUCKS,
-  FETCH_DRIVERS
+  FETCH_DRIVERS,
+  UPDATE_CLIENT
 } from "./types";
 
 export const fetchUser = () => async dispatch => {
@@ -31,6 +32,13 @@ export const submitOrder = (values, history) => async dispatch => {
 
   history.push("/client/dashboard/thanks");
   dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const updateClient = (values, history, id) => async dispatch => {
+  const res = await axios.put(`/admin/api/clients/${id}`, values);
+
+  history.push("/admin/dashboard/clients");
+  // dispatch({ type: UPDATE_CLIENT, payload: res.data });
 };
 
 export const fetchOrders = () => async dispatch => {

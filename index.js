@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const keys = require("./server/config/keys");
 require("./server/models/User");
 require("./server/models/Truck");
+require("./server/models/Zone");
 require("./server/services/passport");
 
 mongoose.connect(
@@ -30,6 +31,7 @@ require("./server/routes/orderRoutes")(app);
 require("./server/routes/userRoutes")(app);
 require("./server/routes/truckRoutes")(app);
 require("./server/routes/driverRoutes")(app);
+require("./server/routes/zoneRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   //Express will serve up production assets like main.js or main.css file
