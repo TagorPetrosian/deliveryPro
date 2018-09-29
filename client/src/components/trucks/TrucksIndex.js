@@ -1,26 +1,18 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchTrucks } from "../../actions";
 
-class OrdersAll extends Component {
+class TrucksIndex extends Component {
   componentDidMount() {
     this.props.fetchTrucks();
   }
 
-  renderStatus(date) {
-    return date ? new Date(date).toLocaleDateString() : "In Progress";
-  }
-
-  renderOrders() {
-    return this.props.orders.reverse().map(order => {
+  renderTrucks() {
+    return this.props.trucks.reverse().map(truck => {
       return (
-        <tr key={order._id}>
-          <td>{order.origin}</td>
-          <td>{order.destination}</td>
-          <td>{new Date(order.dateOrdered).toLocaleDateString()}</td>
-          <td>{this.renderStatus(order.dateRecieved)}</td>
-          <td>{this.renderStatus(order.dateDelivered)}</td>
+        <tr key={truck._id}>
+          <td>{truck.model}</td>
+          <td>{truck.volume}</td>
         </tr>
       );
     });
@@ -28,29 +20,28 @@ class OrdersAll extends Component {
   render() {
     return (
       <div className="container">
-        <h3 className="center-align">Orders</h3>
+        <h3 className="center-align">Trucks</h3>
         <table className="striped responsive-table center-align">
           <thead>
             <tr>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Ordered On:</th>
-              <th>Recieved On:</th>
-              <th>Delivered On:</th>
+              <th>Model</th>
+              <th>
+                Capacity ( m<sup>2</sup> )
+              </th>
             </tr>
           </thead>
-          <tbody>{this.renderOrders()}</tbody>
+          <tbody>{this.renderTrucks()}</tbody>
         </table>
       </div>
     );
   }
 }
 
-function mapStateToProps({ orders }) {
-  return { orders };
+function mapStateToProps({ trucks }) {
+  return { trucks };
 }
 
 export default connect(
   mapStateToProps,
   { fetchTrucks }
-)(OrdersAll);
+)(TrucksIndex);

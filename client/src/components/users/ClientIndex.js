@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchUsers } from "../../actions";
 
-class OrdersIndex extends Component {
+class ClientsIndex extends Component {
   componentDidMount() {
     this.props.fetchUsers();
   }
@@ -11,10 +11,12 @@ class OrdersIndex extends Component {
     return date ? new Date(date).toLocaleDateString() : "In Progress";
   }
 
-  renderOrders() {
+  renderClients() {
     return this.props.users.reverse().map(user => {
       return (
         <tr key={user._id}>
+          <td>{user.fullName}</td>
+          <td>{user.email}</td>
           <td>{user.role}</td>
           <td>{user.company}</td>
           <td>{user.address}</td>
@@ -30,13 +32,15 @@ class OrdersIndex extends Component {
         <table className="striped responsive-table center-align">
           <thead>
             <tr>
+              <th>Full Name</th>
+              <th>email</th>
               <th>Role</th>
               <th>Company</th>
               <th>Address</th>
               <th>Phone</th>
             </tr>
           </thead>
-          <tbody>{this.renderOrders()}</tbody>
+          <tbody>{this.renderClients()}</tbody>
         </table>
       </div>
     );
@@ -50,4 +54,4 @@ function mapStateToProps({ users }) {
 export default connect(
   mapStateToProps,
   { fetchUsers }
-)(OrdersIndex);
+)(ClientsIndex);

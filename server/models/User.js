@@ -9,7 +9,8 @@ const userSchema = new Schema({
   company: String,
   address: String,
   contactPhone: String,
-  fullName: String // should be num? + how to validate israeli phone
+  fullName: String,
+  email: String // should be num? + how to validate israeli phone
 });
 
 mongoose.model("users", userSchema);

@@ -4,19 +4,6 @@ import AdminHeader from "./AdminHeader";
 import M from "materialize-css/dist/js/materialize.min.js";
 import "./ClientDashboard.css";
 
-const OrdersAll = () => {
-  <div>All Orders</div>;
-};
-const UsersIndex = () => {
-  <div>All Orders</div>;
-};
-const TrucksIndex = () => {
-  <div>All Orders</div>;
-};
-
-const ZonesIndex = () => {
-  <div>All Orders</div>;
-};
 export default class AdminDashboard extends Component {
   componentDidMount() {
     var sidenav = document.querySelector(".sidenav");
@@ -40,7 +27,6 @@ export default class AdminDashboard extends Component {
               Clients
             </div>
             <ul className="collapsible-body">
-              <li>Update</li>
               <li>
                 <Link to="/admin/dashboard/clients">View Clients</Link>
               </li>
@@ -66,8 +52,12 @@ export default class AdminDashboard extends Component {
               Trucks
             </div>
             <ul className="collapsible-body">
-              <li>New Truck</li>
-              <li>View Trucks</li>
+              <li>
+                <Link to="/admin/dashboard/trucks/new">New Truck</Link>
+              </li>
+              <li>
+                <Link to="/admin/dashboard/trucks">View Trucks</Link>
+              </li>
             </ul>
           </li>
           <li>
