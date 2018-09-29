@@ -13,6 +13,7 @@ import AdminMetrics from "./AdminMetrics";
 import ClientIndex from "./users/ClientIndex";
 import TruckNew from "./trucks/TruckNew";
 import TrucksIndex from "./trucks/TrucksIndex";
+import DriverIndex from "./drivers/DriverIndex";
 
 class App extends Component {
   componentDidMount() {
@@ -38,6 +39,11 @@ class App extends Component {
               exact
               path="/admin/dashboard/trucks"
               component={TrucksIndex}
+            />
+            <Route
+              exact
+              path="/admin/dashboard/drivers"
+              component={DriverIndex}
             />
             <Route
               exact

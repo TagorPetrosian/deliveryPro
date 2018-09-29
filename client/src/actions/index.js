@@ -4,7 +4,8 @@ import {
   FETCH_ORDERS,
   FETCH_ALL_ORDERS,
   FETCH_CLIENTS,
-  FETCH_TRUCKS
+  FETCH_TRUCKS,
+  FETCH_DRIVERS
 } from "./types";
 
 export const fetchUser = () => async dispatch => {
@@ -52,4 +53,9 @@ export const submitTruck = (values, history) => async dispatch => {
 export const fetchTrucks = () => async dispatch => {
   const res = await axios.get("/api/trucks");
   dispatch({ type: FETCH_TRUCKS, payload: res.data });
+};
+
+export const fetchDrivers = () => async dispatch => {
+  const res = await axios.get("/admin/api/drivers");
+  dispatch({ type: FETCH_DRIVERS, payload: res.data });
 };

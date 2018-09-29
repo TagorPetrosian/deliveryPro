@@ -76,8 +76,9 @@ export default class AdminDashboard extends Component {
               Drivers
             </div>
             <ul className="collapsible-body">
-              <li>New Driver</li>
-              <li>View Drivers</li>
+              <li>
+                <Link to="/admin/dashboard/drivers">View Drivers</Link>
+              </li>
             </ul>
           </li>
         </ul>

@@ -29,6 +29,7 @@ require("./server/routes/billingRoutes")(app);
 require("./server/routes/orderRoutes")(app);
 require("./server/routes/userRoutes")(app);
 require("./server/routes/truckRoutes")(app);
+require("./server/routes/driverRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   //Express will serve up production assets like main.js or main.css file
