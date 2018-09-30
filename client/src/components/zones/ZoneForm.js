@@ -8,38 +8,25 @@ import validateVolume from "../../utils/validateVolume";
 import formFields from "./zoneFormFields";
 
 class ZoneForm extends Component {
-  // renderFields() {
-  //   return _.map(formFields, ({ label, name }) => {
-  //     return (
-  //       <Field
-  //         key={name}
-  //         component={OrderField}
-  //         type="text"
-  //         label={label}
-  //         name={name}
-  //       />
-  //     );
-  //   });
-  // }
   render() {
     return (
       <div className="container">
         <form onSubmit={this.props.handleSubmit(this.props.onZoneSubmit)}>
           <Field
-            key="model"
+            key="center"
             component={ZoneField}
             type="text"
-            label="Model"
-            name="model"
-            placeholder="ISUZU"
+            label="Center Point Address"
+            name="center"
+            placeholder="Address"
           />
           <Field
-            key="volume"
+            key="radius"
             component={ZoneField}
             type="text"
-            label="Volume"
-            name="volume"
-            placeholder="For example 240"
+            label="Radius"
+            name="radius"
+            placeholder="For example 240KM"
           />
           <Link
             to="/admin/dashboard/zones"
@@ -74,9 +61,8 @@ function validate(values) {
     }
   });
 
-  if (isNaN(values["volume"])) {
-    errors["volume"] =
-      "Please enter a number. For example 24 is is the product of 2 X 3 X 4";
+  if (isNaN(values["radius"])) {
+    errors["radius"] = "Please enter a number. ";
   }
 
   return errors;

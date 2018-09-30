@@ -66,8 +66,12 @@ export default class AdminDashboard extends Component {
               Delivery Zones
             </div>
             <ul className="collapsible-body">
-              <li>New Zone</li>
-              <li>View Zones</li>
+              <li>
+                <Link to="/admin/dashboard/zones/new">New Zone</Link>
+              </li>
+              <li>
+                <Link to="/admin/dashboard/zones">View Zones</Link>
+              </li>
             </ul>
           </li>
           <li>

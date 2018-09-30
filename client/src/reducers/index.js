@@ -5,6 +5,7 @@ import ordersReducer from "./ordersReducer";
 import usersReducer from "./usersReducer";
 import trucksReducer from "./trucksReducer";
 import driversReducer from "./driversReducer";
+import zonesReducer from "./zonesReducer";
 
 export default combineReducers({
   auth: authReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
   orders: ordersReducer,
   users: usersReducer,
   trucks: trucksReducer,
-  drivers: driversReducer
+  drivers: driversReducer,
+  zones: zonesReducer
 });

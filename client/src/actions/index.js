@@ -6,7 +6,8 @@ import {
   FETCH_CLIENTS,
   FETCH_TRUCKS,
   FETCH_DRIVERS,
-  UPDATE_CLIENT
+  UPDATE_CLIENT,
+  FETCH_ZONES
 } from "./types";
 
 export const fetchUser = () => async dispatch => {
@@ -32,6 +33,19 @@ export const submitOrder = (values, history) => async dispatch => {
 
   history.push("/client/dashboard/thanks");
   dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const submitZone = (values, history) => async dispatch => {
+  const res = await axios.post("/api/zones", values);
+
+  history.push("/admin/dashboard/zones");
+  dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const fetchZones = () => async dispatch => {
+  const res = await axios.get("/api/zones");
+
+  dispatch({ type: FETCH_ZONES, payload: res.data });
 };
 
 export const updateClient = (values, history, id) => async dispatch => {

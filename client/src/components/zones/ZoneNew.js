@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { reduxForm } from "redux-form";
 import ZoneForm from "./ZoneForm";
 import ZoneFormReview from "./ZoneFormReview";
-// import "./OrderNew.css";
 
 class ZoneNew extends Component {
   state = { showFormReview: false };
@@ -17,7 +16,7 @@ class ZoneNew extends Component {
     }
 
     return (
-      <ZoneForm onTruckSubmit={() => this.setState({ showFormReview: true })} />
+      <ZoneForm onZoneSubmit={() => this.setState({ showFormReview: true })} />
     );
   }
   render() {
