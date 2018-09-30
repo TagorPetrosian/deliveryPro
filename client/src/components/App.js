@@ -14,6 +14,7 @@ import ClientIndex from "./users/ClientIndex";
 import TruckNew from "./trucks/TruckNew";
 import TrucksIndex from "./trucks/TrucksIndex";
 import DriverIndex from "./drivers/DriverIndex";
+import DriverUpdate from "./drivers/DriverUpdate";
 import ClientUpdate from "./users/ClientUpdate";
 import ZoneNew from "./zones/ZoneNew";
 import ZoneIndex from "./zones/ZoneIndex";
@@ -59,6 +60,11 @@ class App extends Component {
               exact
               path="/admin/dashboard/clients/:id"
               component={ClientUpdate}
+            />
+            <Route
+              exact
+              path="/admin/dashboard/drivers/:id"
+              component={DriverUpdate}
             />
             <Route
               exact

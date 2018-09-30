@@ -6,7 +6,6 @@ import {
   FETCH_CLIENTS,
   FETCH_TRUCKS,
   FETCH_DRIVERS,
-  UPDATE_CLIENT,
   FETCH_ZONES
 } from "./types";
 
@@ -52,6 +51,13 @@ export const updateClient = (values, history, id) => async dispatch => {
   const res = await axios.put(`/admin/api/clients/${id}`, values);
 
   history.push("/admin/dashboard/clients");
+  // dispatch({ type: UPDATE_CLIENT, payload: res.data });
+};
+
+export const updateDriver = (values, history, id) => async dispatch => {
+  const res = await axios.put(`/admin/api/drivers/${id}`, values);
+
+  history.push("/admin/dashboard/drivers");
   // dispatch({ type: UPDATE_CLIENT, payload: res.data });
 };
 

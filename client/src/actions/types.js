@@ -6,3 +6,4 @@ export const FETCH_CLIENTS = "FETCH_CLIENTS";
 export const FETCH_DRIVERS = "FETCH_DRIVERS";
 export const UPDATE_CLIENT = "UPATE_CLIENT";
 export const FETCH_ZONES = "FETCH_ZONES";
+export const UPDATE_DRIVER = "UPATE_DRIVER";

@@ -2,42 +2,35 @@ import _ from "lodash";
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
-import ClientField from "./ClientField";
+import DriverField from "./DriverField";
 import LocationSearchInput from "../LocationSearchInput";
 import validateVolume from "../../utils/validateVolume";
-import formFields from "./clientFormFields";
+import formFields from "./driverFormFields";
 
-class ClientForm extends Component {
+class DriverForm extends Component {
   render() {
     return (
       <div className="container">
-        <form onSubmit={this.props.handleSubmit(this.props.onClientSubmit)}>
-          <Field
-            key="company"
-            component={ClientField}
-            type="text"
-            label="company"
-            name="company"
-            placeholder="company"
-          />
+        <form onSubmit={this.props.handleSubmit(this.props.onDriverSubmit)}>
           <Field
             key="address"
-            component={ClientField}
+            component={DriverField}
             type="text"
-            label="address"
+            label="Address"
             name="address"
-            placeholder="address"
+            placeholder="Address"
           />
           <Field
-            key="contactPhone"
-            component={ClientField}
+            key="phone"
+            component={DriverField}
             type="text"
-            label="contactPhone"
+            label="Phone"
             name="contactPhone"
-            placeholder="contactPhone"
+            placeholder="Phone"
           />
+
           <Link
-            to="/admin/dashboard/clients"
+            to="/admin/dashboard/drivers"
             className="red btn-flat white-text"
             style={{ width: "120px" }}
           >
@@ -69,16 +62,11 @@ function validate(values) {
     }
   });
 
-  if (isNaN(values["volume"])) {
-    errors["volume"] =
-      "Please enter a number. For example 24 is is the product of 2 X 3 X 4";
-  }
-
   return errors;
 }
 
 export default reduxForm({
   validate,
-  form: "clientForm",
+  form: "driverForm",
   destroyOnUnmount: false
-})(ClientForm);
+})(DriverForm);

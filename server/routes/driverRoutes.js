@@ -9,4 +9,17 @@ module.exports = app => {
 
     res.send(users);
   });
+
+  app.put("/admin/api/drivers/:id", requireLogin, async (req, res) => {
+    const { address, contactPhone } = req.body;
+    try {
+      const user = await User.update(
+        { _id: req.params.id },
+        { address: address, contactPhone: contactPhone }
+      );
+      res.send(user);
+    } catch (err) {
+      res.status(422).send(err);
+    }
+  });
 };

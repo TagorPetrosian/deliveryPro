@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchDrivers } from "../../actions";
+import { Link } from "react-router-dom";
 
 class DriversIndex extends Component {
   componentDidMount() {
@@ -16,6 +17,11 @@ class DriversIndex extends Component {
           <td>{driver.role}</td>
           <td>{driver.address}</td>
           <td>{driver.contactPhone}</td>
+          <td>
+            <Link to={`/admin/dashboard/drivers/${driver._id}`}>
+              <i className="material-icons">create</i>
+            </Link>
+          </td>
         </tr>
       );
     });
@@ -32,6 +38,7 @@ class DriversIndex extends Component {
               <th>Role</th>
               <th>Address</th>
               <th>Phone</th>
+              <th>Edit</th>
             </tr>
           </thead>
           <tbody>{this.renderDrivers()}</tbody>

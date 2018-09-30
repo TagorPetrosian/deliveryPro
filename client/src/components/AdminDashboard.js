@@ -41,9 +41,6 @@ export default class AdminDashboard extends Component {
               <li>
                 <Link to="/admin/dashboard/orders_all">View Orders</Link>
               </li>
-              <li>
-                <Link to="/admin/dashboard/metrics">Metrics</Link>
-              </li>
             </ul>
           </li>
           <li>
@@ -82,6 +79,17 @@ export default class AdminDashboard extends Component {
             <ul className="collapsible-body">
               <li>
                 <Link to="/admin/dashboard/drivers">View Drivers</Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div className="collapsible-header">
+              <i className="material-icons">data_usage</i>
+              Metrics
+            </div>
+            <ul className="collapsible-body">
+              <li>
+                <Link to="/admin/dashboard/metrics">Orders Summary</Link>
               </li>
             </ul>
           </li>
