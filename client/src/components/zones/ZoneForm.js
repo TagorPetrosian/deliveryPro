@@ -14,7 +14,7 @@ class ZoneForm extends Component {
         <form onSubmit={this.props.handleSubmit(this.props.onZoneSubmit)}>
           <Field
             key="center"
-            component={ZoneField}
+            component={LocationSearchInput}
             type="text"
             label="Center Point Address"
             name="center"

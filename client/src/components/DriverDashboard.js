@@ -95,7 +95,7 @@ export default class AdminDashboard extends Component {
           </li>
         </ul>
         <a
-          href="/admin/dashboard"
+          href="/driver/dashboard"
           data-target="slide-out"
           className="sidenav-trigger"
         >

@@ -4,6 +4,7 @@ import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import OrderField from "./OrderField";
 import LocationSearchInput from "../LocationSearchInput";
+
 import validateVolume from "../../utils/validateVolume";
 import formFields from "./orderFormFields";
 
@@ -25,7 +26,6 @@ class OrderForm extends Component {
     return (
       <div className="container">
         <form onSubmit={this.props.handleSubmit(this.props.onOrderSubmit)}>
-          {/* {this.renderFields()} */}
           <Field
             key="description"
             component={OrderField}
@@ -35,14 +35,14 @@ class OrderForm extends Component {
           />
           <Field
             key="origin"
-            component={OrderField}
+            component={LocationSearchInput}
             type="text"
             label="Origin"
             name="origin"
           />
           <Field
             key="destination"
-            component={OrderField}
+            component={LocationSearchInput}
             type="text"
             label="Destination"
             name="destination"

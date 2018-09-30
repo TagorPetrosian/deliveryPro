@@ -14,7 +14,7 @@ class DriverForm extends Component {
         <form onSubmit={this.props.handleSubmit(this.props.onDriverSubmit)}>
           <Field
             key="address"
-            component={DriverField}
+            component={LocationSearchInput}
             type="text"
             label="Address"
             name="address"

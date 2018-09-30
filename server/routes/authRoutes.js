@@ -13,7 +13,7 @@ module.exports = app => {
     passport.authenticate("google"),
     (req, res) => {
       if (req.user.role === "admin") {
-        return res.redirect("/admin/dashboard");
+        return res.redirect("/admin/dashboard/metrics");
       }
       res.redirect("/client/dashboard/orders");
     }

@@ -22,7 +22,7 @@ class ClientForm extends Component {
           />
           <Field
             key="address"
-            component={ClientField}
+            component={LocationSearchInput}
             type="text"
             label="address"
             name="address"
@@ -32,9 +32,9 @@ class ClientForm extends Component {
             key="contactPhone"
             component={ClientField}
             type="text"
-            label="contactPhone"
+            label="Contact Phone"
             name="contactPhone"
-            placeholder="contactPhone"
+            placeholder="054-775-5656"
           />
           <Link
             to="/admin/dashboard/clients"
