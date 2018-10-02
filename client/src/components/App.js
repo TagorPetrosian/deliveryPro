@@ -19,6 +19,7 @@ import DriverDashboard from "./DriverDashboard";
 import ClientUpdate from "./users/ClientUpdate";
 import ZoneNew from "./zones/ZoneNew";
 import ZoneIndex from "./zones/ZoneIndex";
+import Schedules from "./Schedules";
 
 class App extends Component {
   componentDidMount() {
@@ -36,7 +37,6 @@ class App extends Component {
             <Route path="/client/dashboard/orders/new" component={OrderNew} />
             <Route path="/admin/dashboard/trucks/new" component={TruckNew} />
             <Route path="/admin/dashboard/zones/new" component={ZoneNew} />
-
             <Route
               exact
               path="/client/dashboard/orders"
@@ -46,6 +46,11 @@ class App extends Component {
               exact
               path="/admin/dashboard/trucks"
               component={TrucksIndex}
+            />
+            <Route
+              exact
+              path="/admin/dashboard/schedules"
+              component={Schedules}
             />
             <Route
               exact

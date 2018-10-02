@@ -24,7 +24,7 @@ class TruckNew extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="content-wrapper">
         <div className="container">
           <h3 className="center-align">New Truck</h3>
         </div>

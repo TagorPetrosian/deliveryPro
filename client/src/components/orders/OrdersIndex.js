@@ -27,27 +27,29 @@ class OrdersIndex extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h3 className="center-align">Orders</h3>
-        <table className="striped responsive-table">
-          <thead>
-            <tr>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Ordered On:</th>
-              <th>Recieved On:</th>
-              <th>Delivered On:</th>
-            </tr>
-          </thead>
-          <tbody>{this.renderOrders()}</tbody>
-        </table>
-        <div className="fixed-action-btn">
-          <Link
-            to="/client/dashboard/orders/new"
-            className="btn-floating btn-large red"
-          >
-            <i className="large material-icons">add</i>
-          </Link>
+      <div className="content-wrapper">
+        <div className="container">
+          <h3 className="center-align">Orders</h3>
+          <table className="striped responsive-table">
+            <thead>
+              <tr>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Ordered On:</th>
+                <th>Recieved On:</th>
+                <th>Delivered On:</th>
+              </tr>
+            </thead>
+            <tbody>{this.renderOrders()}</tbody>
+          </table>
+          <div className="fixed-action-btn">
+            <Link
+              to="/client/dashboard/orders/new"
+              className="btn-floating btn-large red"
+            >
+              <i className="large material-icons">add</i>
+            </Link>
+          </div>
         </div>
       </div>
     );

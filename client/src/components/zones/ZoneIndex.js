@@ -19,17 +19,19 @@ class ZonesIndex extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h3 className="center-align">Zones</h3>
-        <table className="striped responsive-table center-align">
-          <thead>
-            <tr>
-              <th>Center</th>
-              <th>Radius (KM)</th>
-            </tr>
-          </thead>
-          <tbody>{this.renderZones()}</tbody>
-        </table>
+      <div className="content-wrapper">
+        <div className="container">
+          <h3 className="center-align">Zones</h3>
+          <table className="striped responsive-table center-align">
+            <thead>
+              <tr>
+                <th>Center</th>
+                <th>Radius (KM)</th>
+              </tr>
+            </thead>
+            <tbody>{this.renderZones()}</tbody>
+          </table>
+        </div>
       </div>
     );
   }

@@ -9,48 +9,50 @@ export default class AdminMetrics extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <div className="masonry row">
-          <div className="col s12">
-            <h2 className="center-align">Dashboard</h2>
-          </div>
-          <div className="col l4 m6 s12">
-            <div className="card hoverable">
-              <div className="card-stacked">
-                <div className="card-metrics">
-                  <h6 className="center-align">New Orders</h6>
-                  <h4 className="center-align">{this.state.newOrders}</h4>
-                </div>
-              </div>
-              <Sparklines data={[5, 10, 5, 20]}>
-                <SparklinesLine color="blue" />
-              </Sparklines>
+      <div className="content-wrapper">
+        <div className="container">
+          <div className="masonry row">
+            <div className="col s12">
+              <h2 className="center-align">Dashboard</h2>
             </div>
-          </div>
-          <div className="col l4 m6 s12">
-            <div className="card hoverable">
-              <div className="card-stacked">
-                <div className="card-metrics">
-                  <h6 className="center-align">Delivered Orders</h6>
-                  <h4 className="center-align">{this.state.delivered}</h4>
+            <div className="col l4 m6 s12">
+              <div className="card hoverable">
+                <div className="card-stacked">
+                  <div className="card-metrics">
+                    <h6 className="center-align">New Orders</h6>
+                    <h4 className="center-align">{this.state.newOrders}</h4>
+                  </div>
                 </div>
+                <Sparklines data={[5, 10, 5, 20]}>
+                  <SparklinesLine color="blue" />
+                </Sparklines>
               </div>
-              <Sparklines data={[5, 10, 5, 20]}>
-                <SparklinesLine color="blue" />
-              </Sparklines>
             </div>
-          </div>
-          <div className="col l4 m6 s12">
-            <div className="card hoverable">
-              <div className="card-stacked">
-                <div className="card-metrics">
-                  <h6 className="center-align">Recieved Orders</h6>
-                  <h4 className="center-align">{this.state.recieved}</h4>
+            <div className="col l4 m6 s12">
+              <div className="card hoverable">
+                <div className="card-stacked">
+                  <div className="card-metrics">
+                    <h6 className="center-align">Delivered Orders</h6>
+                    <h4 className="center-align">{this.state.delivered}</h4>
+                  </div>
                 </div>
+                <Sparklines data={[5, 10, 5, 20]}>
+                  <SparklinesLine color="blue" />
+                </Sparklines>
               </div>
-              <Sparklines data={[5, 10, 5, 20]}>
-                <SparklinesLine color="blue" />
-              </Sparklines>
+            </div>
+            <div className="col l4 m6 s12">
+              <div className="card hoverable">
+                <div className="card-stacked">
+                  <div className="card-metrics">
+                    <h6 className="center-align">Recieved Orders</h6>
+                    <h4 className="center-align">{this.state.recieved}</h4>
+                  </div>
+                </div>
+                <Sparklines data={[5, 10, 5, 20]}>
+                  <SparklinesLine color="blue" />
+                </Sparklines>
+              </div>
             </div>
           </div>
         </div>

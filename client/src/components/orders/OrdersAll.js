@@ -27,20 +27,22 @@ class OrdersAll extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h3 className="center-align">Orders</h3>
-        <table className="striped responsive-table center-align">
-          <thead>
-            <tr>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Ordered On:</th>
-              <th>Recieved On:</th>
-              <th>Delivered On:</th>
-            </tr>
-          </thead>
-          <tbody>{this.renderOrders()}</tbody>
-        </table>
+      <div className="content-wrapper">
+        <div className="container">
+          <h3 className="center-align">Orders</h3>
+          <table className="striped responsive-table center-align">
+            <thead>
+              <tr>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Ordered On:</th>
+                <th>Recieved On:</th>
+                <th>Delivered On:</th>
+              </tr>
+            </thead>
+            <tbody>{this.renderOrders()}</tbody>
+          </table>
+        </div>
       </div>
     );
   }

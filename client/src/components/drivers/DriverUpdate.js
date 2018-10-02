@@ -23,7 +23,7 @@ class DriverUpdate extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="content-wrapper">
         <div className="container">
           <h3 className="center-align">Update Driver</h3>
         </div>

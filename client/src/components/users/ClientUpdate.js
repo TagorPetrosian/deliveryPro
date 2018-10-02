@@ -23,10 +23,8 @@ class ClientUpdate extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <div className="container">
-          <h3 className="center-align">Update Client</h3>
-        </div>
+      <div className="content-wrapper">
+        <h3 className="center-align">Update Client</h3>
         {this.renderContent()}
       </div>
     );

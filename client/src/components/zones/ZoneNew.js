@@ -21,7 +21,7 @@ class ZoneNew extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="content-wrapper">
         <div className="container">
           <h3 className="center-align">New Zone</h3>
         </div>

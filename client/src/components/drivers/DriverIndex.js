@@ -28,21 +28,23 @@ class DriversIndex extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h3 className="center-align">Drivers</h3>
-        <table className="striped responsive-table center-align">
-          <thead>
-            <tr>
-              <th>Full Name</th>
-              <th>email</th>
-              <th>Role</th>
-              <th>Address</th>
-              <th>Phone</th>
-              <th>Edit</th>
-            </tr>
-          </thead>
-          <tbody>{this.renderDrivers()}</tbody>
-        </table>
+      <div className="content-wrapper">
+        <div className="container">
+          <h3 className="center-align">Drivers</h3>
+          <table className="striped responsive-table center-align">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>email</th>
+                <th>Role</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>{this.renderDrivers()}</tbody>
+          </table>
+        </div>
       </div>
     );
   }

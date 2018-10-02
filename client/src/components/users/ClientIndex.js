@@ -33,22 +33,24 @@ class ClientsIndex extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h3 className="center-align">Clients</h3>
-        <table className="striped responsive-table center-align">
-          <thead>
-            <tr>
-              <th>Full Name</th>
-              <th>email</th>
-              <th>Role</th>
-              <th>Company</th>
-              <th>Address</th>
-              <th>Phone</th>
-              <th>Edit</th>
-            </tr>
-          </thead>
-          <tbody>{this.renderClients()}</tbody>
-        </table>
+      <div className="content-wrapper">
+        <div className="container">
+          <h3 className="center-align">Clients</h3>
+          <table className="striped responsive-table center-align">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>email</th>
+                <th>Role</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>{this.renderClients()}</tbody>
+          </table>
+        </div>
       </div>
     );
   }
