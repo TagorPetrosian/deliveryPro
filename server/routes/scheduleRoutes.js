@@ -57,5 +57,16 @@ module.exports = app => {
     res.send(schedules);
   });
 
-  app.get("/admin/api/schedules/:id", requireLogin, async (req, res) => {});
+  app.get("/driver/api/schedule", requireLogin, async (req, res) => {
+    const schedule = {
+      driver: "brad",
+      stops: [
+        { location: "telaviv", orderId: "1" },
+        { location: "petahtikva", orderId: "2" },
+        { location: "ramatgan", orderId: "4" }
+      ]
+    };
+
+    res.send(schedule);
+  });
 };

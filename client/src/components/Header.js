@@ -4,6 +4,15 @@ import { Link } from "react-router-dom";
 import Payments from "./Payments";
 
 class Header extends Component {
+  renderDashboardRef(role) {
+    if (role === "admin") {
+      return "/admin/dashboard/metrics";
+    } else if (role === "client") {
+      return "/client/dashboard/orders";
+    } else if (role === "driver") {
+      return "/driver/dashboard/schedule";
+    }
+  }
   renderContent() {
     switch (this.props.auth) {
       case null:
@@ -20,13 +29,7 @@ class Header extends Component {
             <a href="/">Home</a>
           </li>,
           <li key="5">
-            <a
-              href={
-                this.props.auth.role === "admin"
-                  ? "/admin/dashboard/metrics"
-                  : "/client/dashboard/orders"
-              }
-            >
+            <a href={this.renderDashboardRef(this.props.auth.role)}>
               Dashboard
             </a>
           </li>,

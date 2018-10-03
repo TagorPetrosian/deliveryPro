@@ -7,7 +7,8 @@ import {
   FETCH_TRUCKS,
   FETCH_DRIVERS,
   FETCH_ZONES,
-  FETCH_SCHEDULES
+  FETCH_SCHEDULES,
+  FETCH_SCHEDULE
 } from "./types";
 
 export const fetchUser = () => async dispatch => {
@@ -92,4 +93,9 @@ export const fetchDrivers = () => async dispatch => {
 export const fetchSchedules = () => async dispatch => {
   const res = await axios.get("/admin/api/schedules");
   dispatch({ type: FETCH_SCHEDULES, payload: res.data });
+};
+
+export const fetchSchedule = () => async dispatch => {
+  const res = await axios.get("/driver/api/schedule");
+  dispatch({ type: FETCH_SCHEDULE, payload: res.data });
 };

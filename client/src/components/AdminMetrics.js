@@ -13,7 +13,7 @@ export default class AdminMetrics extends Component {
         <div className="container">
           <div className="masonry row">
             <div className="col s12">
-              <h2 className="center-align">Dashboard</h2>
+              <h3 className="center-align">Dashboard</h3>
             </div>
             <div className="col l4 m6 s12">
               <div className="card hoverable">

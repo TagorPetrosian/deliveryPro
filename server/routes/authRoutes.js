@@ -14,6 +14,8 @@ module.exports = app => {
     (req, res) => {
       if (req.user.role === "admin") {
         return res.redirect("/admin/dashboard/metrics");
+      } else if (req.user.role === "driver") {
+        return res.redirect("/driver/dashboard/schedule");
       }
       res.redirect("/client/dashboard/orders");
     }

@@ -16,5 +16,6 @@ export default combineReducers({
   trucks: trucksReducer,
   drivers: driversReducer,
   zones: zonesReducer,
-  schedules: schedulesReducer
+  schedules: schedulesReducer,
+  schedule: schedulesReducer
 });

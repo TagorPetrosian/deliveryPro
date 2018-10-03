@@ -20,6 +20,7 @@ import ClientUpdate from "./users/ClientUpdate";
 import ZoneNew from "./zones/ZoneNew";
 import ZoneIndex from "./zones/ZoneIndex";
 import Schedules from "./Schedules";
+import Schedule from "./Schedule";
 
 class App extends Component {
   componentDidMount() {
@@ -51,6 +52,11 @@ class App extends Component {
               exact
               path="/admin/dashboard/schedules"
               component={Schedules}
+            />
+            <Route
+              exact
+              path="/driver/dashboard/schedule"
+              component={Schedule}
             />
             <Route
               exact

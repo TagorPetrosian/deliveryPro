@@ -8,3 +8,4 @@ export const UPDATE_CLIENT = "UPATE_CLIENT";
 export const FETCH_ZONES = "FETCH_ZONES";
 export const UPDATE_DRIVER = "UPATE_DRIVER";
 export const FETCH_SCHEDULES = "FETCH_SCHEDULES";
+export const FETCH_SCHEDULE = "FETCH_SCHEDULE";

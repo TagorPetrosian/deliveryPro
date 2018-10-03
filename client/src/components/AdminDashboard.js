@@ -93,6 +93,17 @@ export default class AdminDashboard extends Component {
               </li>
             </ul>
           </li>
+          <li>
+            <div className="collapsible-header">
+              <i className="material-icons">access_time</i>
+              Schedules
+            </div>
+            <ul className="collapsible-body">
+              <li>
+                <Link to="/admin/dashboard/schedules">View Schdules</Link>
+              </li>
+            </ul>
+          </li>
         </ul>
         <a
           href="/admin/dashboard"

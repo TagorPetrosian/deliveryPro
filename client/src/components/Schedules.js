@@ -9,7 +9,7 @@ class Schedules extends Component {
   renderSchedules() {
     return this.props.schedules.map(schedule => {
       return (
-        <ul className="collection with-header">
+        <ul className="collection with-header hoverable">
           <li className="collection-header">
             <h4>
               {schedule.driver}
@@ -22,7 +22,7 @@ class Schedules extends Component {
     });
   }
   renderStops(stops) {
-    return stops.map((stop, i) => {
+    return stops.map(stop => {
       return <li className="collection-item">{stop.location}</li>;
     });
   }
@@ -30,7 +30,7 @@ class Schedules extends Component {
     return (
       <div className="content-wrapper">
         <div className="container">
-          <h2 className="center-align">Daily Schedules</h2>
+          <h3 className="center-align">Daily Schedules</h3>
           {this.renderSchedules()}
         </div>
       </div>
