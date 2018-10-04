@@ -10,7 +10,7 @@ class OrderUpdate extends Component {
     return (
       <div className="content-wrapper">
         <div className="container">
-          <h3> This is my update order Comp.</h3>
+          <h3 className="center-align"> Package Status</h3>
           <a
             onClick={() => {
               this.props.updateOrder(

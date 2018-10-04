@@ -4,9 +4,9 @@ const SchedulesSchema = require("./Schedule");
 
 const DailySchedulesSchema = new Schema({
   dailySchedules: [SchedulesSchema],
-  dateCreated: Date
+  dateCreated: String
 });
 
-mongoose.model("DailySchedules", SchedulesSchema);
+mongoose.model("DailySchedule", SchedulesSchema);
 
 module.exports = DailySchedulesSchema;

@@ -41,7 +41,7 @@ class OrderForm extends Component {
             placeholder="For example 24"
           />
           <Field
-            key="volume"
+            key="phone"
             component={OrderField}
             type="text"
             label="Contact Phone"

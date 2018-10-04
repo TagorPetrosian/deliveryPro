@@ -7,13 +7,13 @@ class Schedules extends Component {
     this.props.fetchSchedules();
   }
   renderSchedules() {
-    return this.props.schedules.map(schedule => {
+    return this.props.schedules.map((schedule, i) => {
       return (
-        <ul className="collection with-header hoverable">
+        <ul key={i} className="collection with-header hoverable">
           <li className="collection-header">
             <h4>
-              {schedule.driver}
-              <span class="new badge red">{schedule.stops.length}</span>
+              {schedule.driverName}
+              <span className="new badge red">{schedule.stops.length}</span>
             </h4>
           </li>
           {this.renderStops(schedule.stops)}
@@ -22,8 +22,13 @@ class Schedules extends Component {
     });
   }
   renderStops(stops) {
-    return stops.map(stop => {
-      return <li className="collection-item">{stop.location}</li>;
+    return stops.map((stop, i) => {
+      return (
+        <li key={stop + i} className="collection-item">
+          <span style={{ color: "red" }}>{stop.sort} At </span>
+          {stop.location}
+        </li>
+      );
     });
   }
   render() {

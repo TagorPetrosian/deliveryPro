@@ -8,8 +8,8 @@ class ClientsIndex extends Component {
     this.props.fetchUsers();
   }
 
-  renderStatus(date) {
-    return date ? new Date(date).toLocaleDateString() : "In Progress";
+  renderCol(col) {
+    return col ? col : "Not Filled Yet";
   }
 
   renderClients() {
@@ -19,9 +19,9 @@ class ClientsIndex extends Component {
           <td>{user.fullName}</td>
           <td>{user.email}</td>
           <td>{user.role}</td>
-          <td>{user.company}</td>
-          <td>{user.address}</td>
-          <td>{user.contactPhone}</td>
+          <td>{this.renderCol(user.company)}</td>
+          <td>{this.renderCol(user.address)}</td>
+          <td>{this.renderCol(user.contactPhone)}</td>
           <td>
             <Link to={`/admin/dashboard/clients/${user._id}`}>
               <i className="material-icons">create</i>

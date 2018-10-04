@@ -7,6 +7,7 @@ const keys = require("./server/config/keys");
 require("./server/models/User");
 require("./server/models/Truck");
 require("./server/models/Zone");
+require("./server/models/DailySchedules");
 require("./server/services/passport");
 
 mongoose.connect(

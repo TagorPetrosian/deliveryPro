@@ -6,8 +6,12 @@ import { fetchOrders } from "../../actions";
 class OrdersIndex extends Component {
   componentDidMount() {
     this.props.fetchOrders();
+    console.log(this.props.orders);
   }
 
+  renderCol(col) {
+    return col ? col : "Not Filled Yet";
+  }
   renderStatus(date) {
     return date ? new Date(date).toLocaleDateString() : "In Progress";
   }

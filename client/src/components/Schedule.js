@@ -7,6 +7,9 @@ class Schedule extends Component {
     this.props.fetchSchedule();
   }
 
+  renderName(name) {
+    return name ? name : "";
+  }
   renderStops(schedule) {
     const { stops } = schedule;
     if (!stops) {
@@ -17,8 +20,9 @@ class Schedule extends Component {
           <a
             key={`${stop.location}${i}`}
             className="collection-item"
-            href={`/driver/dashboard/schedule/orders/${stop.orderId}`}
+            href={`/driver/dashboard/schedule/orders/${stop._order}`}
           >
+            {stop.sort + " At "}
             {stop.location}
           </a>
         );
@@ -31,7 +35,7 @@ class Schedule extends Component {
       <div className="content-wrapper">
         <div className="container">
           <h3 className="center-align">
-            {this.props.schedule.driver + " "}
+            {this.renderName(this.props.schedule.driverName) + " "}
             Daily Schedule
           </h3>
           <div className="collection">

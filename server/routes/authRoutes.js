@@ -17,7 +17,7 @@ module.exports = app => {
       } else if (req.user.role === "driver") {
         return res.redirect("/driver/dashboard/schedule");
       } else if (req.user.role === "client") {
-        return res.redirect("/client/dashboard/orders");
+        return res.redirect("/client/dashboard/orders/new");
       }
     }
   );
