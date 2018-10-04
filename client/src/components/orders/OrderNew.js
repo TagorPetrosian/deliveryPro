@@ -31,7 +31,8 @@ class OrderNew extends Component {
         {this.renderContent()}
         <div className="container teal lighten-5 valign-wrapper">
           <h6 className="center-align">
-            *Standard rates apply 50 credits per package
+            *To submit the order you must add credits. You can add them at the
+            top of the page by clicking the "ADD CREDITS" button
           </h6>
         </div>
       </div>

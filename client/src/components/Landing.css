@@ -13,7 +13,7 @@
 #about > div {
   display: table-cell;
   width: 50%;
-  height: 500px;
+  height: 400px;
 }
 
 #about .left-box-wrapper {
@@ -56,7 +56,6 @@ li {
 .ul0 li {
   list-style: none;
   display: block;
-  margin-top: 40px;
 }
 
 .icon {
@@ -67,4 +66,8 @@ li {
 .slider-text {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.caption {
+  margin-top: 10px;
 }

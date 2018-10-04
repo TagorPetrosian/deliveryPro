@@ -18,13 +18,14 @@ class OrdersIndex extends Component {
         <tr key={order._id}>
           <td>{order.origin}</td>
           <td>{order.destination}</td>
-          <td>{new Date(order.dateOrdered).toLocaleDateString()}</td>
+          <td>{this.renderStatus(order.dateOrdered)}</td>
           <td>{this.renderStatus(order.dateRecieved)}</td>
           <td>{this.renderStatus(order.dateDelivered)}</td>
         </tr>
       );
     });
   }
+
   render() {
     return (
       <div className="content-wrapper">

@@ -39,7 +39,9 @@ const OrderFormReview = ({ onCancel, formValues, submitOrder, history }) => {
 };
 
 function mapStateToProps(state) {
-  return { formValues: state.form.orderForm.values };
+  return {
+    formValues: state.form.orderForm.values
+  };
 }
 
 export default connect(

@@ -36,6 +36,12 @@ class ClientsIndex extends Component {
       <div className="content-wrapper">
         <div className="container">
           <h3 className="center-align">Clients</h3>
+          <div className="teal lighten-5 valign-wrapper">
+            <h6 className="center-align">
+              Press the <i className="material-icons">create</i> icon to add
+              more inforamtion about clients
+            </h6>
+          </div>
           <table className="striped responsive-table center-align">
             <thead>
               <tr>

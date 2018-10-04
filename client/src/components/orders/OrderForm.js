@@ -4,24 +4,9 @@ import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import OrderField from "./OrderField";
 import LocationSearchInput from "../LocationSearchInput";
-
-import validateVolume from "../../utils/validateVolume";
 import formFields from "./orderFormFields";
 
 class OrderForm extends Component {
-  // renderFields() {
-  //   return _.map(formFields, ({ label, name }) => {
-  //     return (
-  //       <Field
-  //         key={name}
-  //         component={OrderField}
-  //         type="text"
-  //         label={label}
-  //         name={name}
-  //       />
-  //     );
-  //   });
-  // }
   render() {
     return (
       <div className="container">

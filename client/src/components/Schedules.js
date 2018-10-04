@@ -13,7 +13,7 @@ class Schedules extends Component {
           <li className="collection-header">
             <h4>
               {schedule.driver}
-              <span class="new badge red">{10}</span>
+              <span class="new badge red">{schedule.stops.length}</span>
             </h4>
           </li>
           {this.renderStops(schedule.stops)}

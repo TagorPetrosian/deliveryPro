@@ -54,22 +54,15 @@ export default class Landing extends Component {
           </div>
           <div className="row">
             <div className="col s6">
-              <h3 className="left-align">THE TRUCKING BRAND</h3>
+              <h3 className="left-align">THE DELIVERYPRO BRAND</h3>
               <p className="p1 left-align">
-                Cozy sphinx waves quart jug of bad milk. A very bad quack might
-                jinx zippy fowls. Few quips galvanized the mock jury box. Quick
-                brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and
-                my wolves quack! Blowzy red vixens fight for a quick jump.
-                Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to
-                vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun
-                TV quiz game. Woven silk pyjamas exchanged for blue quartz.
-                Brawny gods just
+                With a special algorithm unique to our company, we make fast
+                shipping, all over the country.
               </p>
-              <p className="p2 left-align">
-                Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to
-                vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun
-                TV quiz game. Woven silk pyjamas exchanged for blue quartz.
-                Brawny gods just.
+              <p className="p1 left-align">
+                With a short click, you can order a delivery, track on it's
+                progress at your computer or phone in any time at deliveryPro we
+                committed to a fast, reliable and safety service
               </p>
             </div>
             <div className="col s6">
@@ -125,7 +118,7 @@ export default class Landing extends Component {
                       />
                       <div className="caption left-align">
                         <div className="txt1 white-text">
-                          Shipping Worldwide
+                          Shipping In Israel
                         </div>
                         <div className="txt2 white-text">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -163,20 +156,14 @@ export default class Landing extends Component {
             <div className="col s6">
               <h3 className="right-align">SAFETY & SECURITY</h3>
               <p className="p1 right-align">
-                Cozy sphinx waves quart jug of bad milk. A very bad quack might
-                jinx zippy fowls. Few quips galvanized the mock jury box. Quick
-                brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and
-                my wolves quack! Blowzy red vixens fight for a quick jump.
-                Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to
-                vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun
-                TV quiz game. Woven silk pyjamas exchanged for blue quartz.
-                Brawny gods just
+                The packages are collected directly from the client. All the
+                stages of the delivery are documented on line, and can be
+                followed by the client at any given time.
               </p>
-              <p className="p2 right-align">
-                Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to
-                vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun
-                TV quiz game. Woven silk pyjamas exchanged for blue quartz.
-                Brawny gods just.
+              <p className="p1 right-align">
+                All the shipping carried at secured trucks, and taken care
+                carefully, so they won't be damaged during the whole stages of
+                the delivery
               </p>
             </div>
           </div>

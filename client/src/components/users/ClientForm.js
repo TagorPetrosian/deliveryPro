@@ -4,7 +4,6 @@ import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import ClientField from "./ClientField";
 import LocationSearchInput from "../LocationSearchInput";
-import validateVolume from "../../utils/validateVolume";
 import formFields from "./clientFormFields";
 
 class ClientForm extends Component {

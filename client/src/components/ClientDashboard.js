@@ -32,9 +32,6 @@ export default class ClientDashboard extends Component {
           <li>
             <Link to="/client/dashboard/orders">View Orders</Link>
           </li>
-          <li>
-            <Link to="/client/dashboard/orders">Reports</Link>
-          </li>
         </ul>
         <a
           href="/client/dashboard"
