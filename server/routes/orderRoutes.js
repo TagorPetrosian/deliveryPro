@@ -42,4 +42,42 @@ module.exports = app => {
 
     res.send(orders);
   });
+  app.put("/admin/api/orders/:id", requireLogin, async (req, res) => {
+    let { recieved, delivered } = req.body;
+    let dateRecieved, dateDelivered;
+
+    if (!delivered && recieved) {
+      delivered = false;
+      dateRecieved = Date.now();
+      try {
+        const order = await Order.update(
+          { _id: req.params.id },
+          {
+            recieved: recieved,
+            delivered: delivered,
+            dateRecieved: dateRecieved
+          }
+        );
+        res.send(order);
+      } catch (err) {
+        res.status(422).send(err);
+      }
+    } else if (!recieved && delivered) {
+      recieved = true;
+      dateDelivered = Date.now();
+      try {
+        const order = await Order.update(
+          { _id: req.params.id },
+          {
+            recieved: recieved,
+            delivered: delivered,
+            dateDelivered: dateDelivered
+          }
+        );
+        res.send(order);
+      } catch (err) {
+        res.status(422).send(err);
+      }
+    }
+  });
 };

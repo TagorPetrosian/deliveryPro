@@ -21,6 +21,8 @@ import ZoneNew from "./zones/ZoneNew";
 import ZoneIndex from "./zones/ZoneIndex";
 import Schedules from "./Schedules";
 import Schedule from "./Schedule";
+import OrderUpdate from "./orders/OrderUpdate";
+import OrderUpdatedMessage from "./orders/OrderUpdatedMessage";
 
 class App extends Component {
   componentDidMount() {
@@ -38,6 +40,12 @@ class App extends Component {
             <Route path="/client/dashboard/orders/new" component={OrderNew} />
             <Route path="/admin/dashboard/trucks/new" component={TruckNew} />
             <Route path="/admin/dashboard/zones/new" component={ZoneNew} />
+            <Route
+              exact
+              path="/driver/dashboard/updated"
+              component={OrderUpdatedMessage}
+            />
+
             <Route
               exact
               path="/client/dashboard/orders"
@@ -78,6 +86,11 @@ class App extends Component {
               exact
               path="/admin/dashboard/drivers/:id"
               component={DriverUpdate}
+            />
+            <Route
+              exact
+              path="/driver/dashboard/schedule/orders/:id"
+              component={OrderUpdate}
             />
             <Route
               exact

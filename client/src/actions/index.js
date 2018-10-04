@@ -99,3 +99,9 @@ export const fetchSchedule = () => async dispatch => {
   const res = await axios.get("/driver/api/schedule");
   dispatch({ type: FETCH_SCHEDULE, payload: res.data });
 };
+
+export const updateOrder = (values, history, id) => async dispatch => {
+  const res = await axios.put(`/admin/api/orders/${id}`, values);
+
+  history.push("/driver/dashboard/updated");
+};

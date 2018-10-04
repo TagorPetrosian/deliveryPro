@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AdminHeader from "./AdminHeader";
+import Header from "./Header";
 import M from "materialize-css/dist/js/materialize.min.js";
 import "./ClientDashboard.css";
 
@@ -18,7 +18,7 @@ export default class AdminDashboard extends Component {
   render() {
     return (
       <div>
-        <AdminHeader />
+        <Header />
 
         <ul id="slide-out" className="sidenav sidenav-fixed collapsible">
           <li>

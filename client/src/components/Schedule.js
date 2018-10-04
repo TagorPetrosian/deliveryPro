@@ -14,14 +14,13 @@ class Schedule extends Component {
     } else {
       return stops.map((stop, i) => {
         return (
-          <li key={`${stop.location}${i}`} className="collection-item">
-            <div>
-              {stop.location}
-              <a href="#!" class="secondary-content">
-                <i class="material-icons">send</i>
-              </a>
-            </div>
-          </li>
+          <a
+            key={`${stop.location}${i}`}
+            className="collection-item"
+            href={`/driver/dashboard/schedule/orders/${stop.orderId}`}
+          >
+            {stop.location}
+          </a>
         );
       });
     }
@@ -31,16 +30,13 @@ class Schedule extends Component {
     return (
       <div className="content-wrapper">
         <div className="container">
-          <h3 className="center-align">Daily Schedule</h3>
-          <ul className="collection with-header hoverable">
-            <li className="collection-header">
-              <h4>
-                {this.props.schedule.driver}
-                <span class="new badge red">{10}</span>
-              </h4>
-            </li>
+          <h3 className="center-align">
+            {this.props.schedule.driver + " "}
+            Daily Schedule
+          </h3>
+          <div className="collection">
             {this.renderStops(this.props.schedule)}
-          </ul>
+          </div>
         </div>
       </div>
     );

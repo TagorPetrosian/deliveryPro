@@ -13,6 +13,41 @@ class Header extends Component {
       return "/driver/dashboard/schedule";
     }
   }
+
+  headerList() {
+    if (this.props.auth.role === "client") {
+      return [
+        <li key="4">
+          <a href="/">Home</a>
+        </li>,
+        <li key="5">
+          <a href={this.renderDashboardRef(this.props.auth.role)}>Dashboard</a>
+        </li>,
+        <li key="1">
+          <Payments />
+        </li>,
+        <li key="3" style={{ margin: "0 10px" }}>
+          Credits: {this.props.auth.credits}
+        </li>,
+        <li key="2">
+          <a href="/api/logout">Logout</a>
+        </li>
+      ];
+    } else {
+      return [
+        <li key="4">
+          <a href="/">Home</a>
+        </li>,
+        <li key="5">
+          <a href={this.renderDashboardRef(this.props.auth.role)}>Dashboard</a>
+        </li>,
+        <li key="2">
+          <a href="/api/logout">Logout</a>
+        </li>
+      ];
+    }
+  }
+
   renderContent() {
     switch (this.props.auth) {
       case null:
@@ -24,25 +59,7 @@ class Header extends Component {
           </li>
         );
       default:
-        return [
-          <li key="4">
-            <a href="/">Home</a>
-          </li>,
-          <li key="5">
-            <a href={this.renderDashboardRef(this.props.auth.role)}>
-              Dashboard
-            </a>
-          </li>,
-          <li key="1">
-            <Payments />
-          </li>,
-          <li key="3" style={{ margin: "0 10px" }}>
-            Credits: {this.props.auth.credits}
-          </li>,
-          <li key="2">
-            <a href="/api/logout">Logout</a>
-          </li>
-        ];
+        return [this.headerList()];
     }
   }
   render() {
