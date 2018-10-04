@@ -19,5 +19,10 @@ export default [
     name: "volume",
     noValueError:
       "Please provide length, width, height separated by comma and a space. For example : 2, 3, 4"
+  },
+  {
+    label: "Contact Phone",
+    name: "contactPhone",
+    noValueError: "Please provide a Phone Number"
   }
 ];

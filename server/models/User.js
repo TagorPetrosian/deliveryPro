@@ -5,7 +5,7 @@ const OrderSchema = require("./Order");
 const userSchema = new Schema({
   googleId: String,
   credits: { type: Number, default: 0 },
-  role: { type: String, default: "client" },
+  role: { type: String, default: "driver" },
   company: String,
   address: String,
   contactPhone: String,

@@ -12,8 +12,7 @@ module.exports = app => {
     const zones = await Zone.find({});
     const trucks = await Truck.find({});
     const drivers = await User.find({ role: "driver" });
-    // const zonesWithLatLng = []; // zones street to coordinates map
-    // const stopsWithLatLng = []; // stops street to coordinates map
+    const deviderSize = Math.min(drivers.length, trucks.length);
     const stops = [];
     const schedules = [];
 
@@ -22,7 +21,7 @@ module.exports = app => {
       stops.push({
         location: pickup.origin,
         description: pickup.description,
-        orderId: pickup.id,
+        _order: pickup.id,
         volume: pickup.volume,
         sort: "Pickup"
       });
@@ -33,21 +32,22 @@ module.exports = app => {
       stops.push({
         location: drop.destionation,
         description: drop.description,
-        orderId: picdropkup.id,
+        _order: drop.id,
         volume: drop.volume,
         sort: "Drop"
       });
     }
 
-    const deviderSize = Math.min(drivers.length, trucks.length);
+    // while (stops.length > 0) {
+    //   let driver = drivers.pop();
+    //   schedules.push({
+    //     _driver: driver.googleId,
+    //     driverName: drivers.fullName,
+    //     stops: stops.splice(0, deviderSize)
+    //   });
+    // }
 
-    for (let i = 0; i < deviderSize; i++) {
-      let schedule = {
-        _driver: drivers[i].id
-      };
-    }
-
-    res.send(zonesWithLatLng);
+    res.send(stops);
     // const schedules = [
     //   {
     //     driverId: "345",

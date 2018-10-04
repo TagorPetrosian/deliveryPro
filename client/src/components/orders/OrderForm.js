@@ -40,6 +40,14 @@ class OrderForm extends Component {
             name="volume"
             placeholder="For example 24"
           />
+          <Field
+            key="volume"
+            component={OrderField}
+            type="text"
+            label="Contact Phone"
+            name="contactPhone"
+            placeholder="0547758469"
+          />
           <Link
             to="/client/dashboard/orders"
             className="red btn-flat white-text"
