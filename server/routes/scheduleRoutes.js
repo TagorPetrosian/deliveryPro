@@ -15,15 +15,7 @@ module.exports = app => {
     // const zonesWithLatLng = []; // zones street to coordinates map
     // const stopsWithLatLng = []; // stops street to coordinates map
     const stops = [];
-
-    //map zone locations to coordinates
-    // for (zone of zones) {
-    //   let zoneWithCord = {};
-    //   zoneWithCord.center = zone.center;
-    //   zoneWithCord.radius = zone.radius;
-
-    //   zonesWithLatLng.push(zoneWithCord);
-    // }
+    const schedules = [];
 
     //sort to stops by origin
     for (pickup of pickups) {
@@ -47,21 +39,12 @@ module.exports = app => {
       });
     }
 
-    // //map stop locations to coordinates
-    // for (stop of stops) {
-    //   googleMapsClient.geocode(
-    //     {
-    //       address: stop.location
-    //     },
-    //     (err, response) => {
-    //       if (!err) {
-    //         stop.latlng = response.json.results[0].geometry.location;
-    //       }
-    //     }
-    //   );
-    // }
+    const deviderSize = Math.min(drivers.length, trucks.length);
 
-    for (driver of drivers) {
+    for (let i = 0; i < deviderSize; i++) {
+      let schedule = {
+        _driver: drivers[i].id
+      };
     }
 
     res.send(zonesWithLatLng);
