@@ -42,6 +42,9 @@ module.exports = app => {
       );
       while (stops.length > 0) {
         let driver = drivers.pop();
+        if (driver === undefined) {
+          break;
+        }
         schedules.push({
           _driver: driver.id,
           driverName: driver.fullName,
@@ -91,6 +94,9 @@ module.exports = app => {
 
       while (stops.length > 0) {
         let driver = drivers.pop();
+        if (driver === undefined) {
+          break;
+        }
         schedules.push({
           _driver: driver.id,
           driverName: driver.fullName,
