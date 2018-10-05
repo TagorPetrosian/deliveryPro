@@ -47,7 +47,7 @@ module.exports = app => {
         stops: stops.splice(0, deviderSize)
       });
     }
-    res.send(schedules);
+    res.send(trucks);
   });
 
   app.get("/driver/api/schedule", requireLogin, async (req, res) => {
@@ -94,7 +94,7 @@ module.exports = app => {
     }
 
     for (schedule of schedules) {
-      if ((schedule.driverId = req.user.id)) {
+      if ((schedule._driver = req.user.id)) {
         res.send(schedule);
       } else {
         res.send({});
