@@ -94,10 +94,10 @@ module.exports = app => {
     }
 
     for (schedule of schedules) {
-      if (schedule._driver == req.user.id) {
+      if (schedule._driver.equals(req.user.id)) {
         res.send(schedule);
       } else {
-        res.send({});
+        // res.send(schedule._driver);
       }
     }
   });
