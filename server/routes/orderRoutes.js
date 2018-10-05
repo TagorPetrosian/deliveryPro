@@ -80,4 +80,12 @@ module.exports = app => {
       }
     }
   });
+  app.get("/admin/api/orders/:id", requireLogin, async (req, res) => {
+    try {
+      const order = await Order.find({ _id: req.params.id });
+      res.send(order);
+    } catch (err) {
+      res.status(422).send(err);
+    }
+  });
 };

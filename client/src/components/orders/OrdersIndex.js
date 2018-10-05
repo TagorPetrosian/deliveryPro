@@ -6,7 +6,6 @@ import { fetchOrders } from "../../actions";
 class OrdersIndex extends Component {
   componentDidMount() {
     this.props.fetchOrders();
-    console.log(this.props.orders);
   }
 
   renderCol(col) {

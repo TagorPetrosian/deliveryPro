@@ -17,5 +17,6 @@ export default combineReducers({
   drivers: driversReducer,
   zones: zonesReducer,
   schedules: schedulesReducer,
-  schedule: schedulesReducer
+  schedule: schedulesReducer,
+  order: ordersReducer
 });

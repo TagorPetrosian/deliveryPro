@@ -10,3 +10,4 @@ export const UPDATE_DRIVER = "UPATE_DRIVER";
 export const FETCH_SCHEDULES = "FETCH_SCHEDULES";
 export const FETCH_SCHEDULE = "FETCH_SCHEDULE";
 export const UPDATE_ORDER = "UPATE_ORDER";
+export const FETCH_ORDER = "FETCH_ORDER";
