@@ -42,7 +42,7 @@ module.exports = app => {
     while (stops.length > 0) {
       let driver = drivers.pop();
       schedules.push({
-        _driver: driver._id,
+        _driver: driver.id,
         driverName: driver.fullName,
         stops: stops.splice(0, deviderSize)
       });
@@ -87,7 +87,7 @@ module.exports = app => {
     while (stops.length > 0) {
       let driver = drivers.pop();
       schedules.push({
-        _driver: driver._id,
+        _driver: driver.id,
         driverName: driver.fullName,
         stops: stops.splice(0, deviderSize)
       });
@@ -96,7 +96,6 @@ module.exports = app => {
     for (schedule of schedules) {
       if (schedule._driver.equals(req.user.id)) {
         res.send(schedule);
-      } else {
       }
     }
   });
