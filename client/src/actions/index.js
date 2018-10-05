@@ -76,7 +76,7 @@ export const fetchAllOrders = () => async dispatch => {
 export const submitTruck = (values, history) => async dispatch => {
   const res = await axios.post("/api/trucks", values);
 
-  history.push("/admin/dashboard/metrics");
+  history.push("/admin/dashboard/trucks");
   dispatch({ type: FETCH_USER, payload: res.data });
 };
 
