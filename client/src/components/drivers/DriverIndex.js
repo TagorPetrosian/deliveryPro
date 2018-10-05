@@ -8,6 +8,9 @@ class DriversIndex extends Component {
     this.props.fetchDrivers();
   }
 
+  renderCol(col) {
+    return col ? col : "Not Filled Yet";
+  }
   renderDrivers() {
     return this.props.drivers.reverse().map(driver => {
       return (
@@ -15,8 +18,8 @@ class DriversIndex extends Component {
           <td>{driver.fullName}</td>
           <td>{driver.email}</td>
           <td>{driver.role}</td>
-          <td>{driver.address}</td>
-          <td>{driver.contactPhone}</td>
+          <td>{this.renderCol(driver.address)}</td>
+          <td>{this.renderCol(driver.contactPhone)}</td>
           <td>
             <Link to={`/admin/dashboard/drivers/${driver._id}`}>
               <i className="material-icons">create</i>

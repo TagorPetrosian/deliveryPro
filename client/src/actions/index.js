@@ -9,7 +9,8 @@ import {
   FETCH_ZONES,
   FETCH_SCHEDULES,
   FETCH_SCHEDULE,
-  FETCH_ORDER
+  FETCH_ORDER,
+  FETCH_METRICS
 } from "./types";
 
 export const fetchUser = () => async dispatch => {
@@ -67,6 +68,10 @@ export const updateDriver = (values, history, id) => async dispatch => {
 export const fetchOrders = () => async dispatch => {
   const res = await axios.get("/api/orders");
   dispatch({ type: FETCH_ORDERS, payload: res.data });
+};
+export const fetchMetrics = () => async dispatch => {
+  const res = await axios.get("/admin/api/metrics");
+  dispatch({ type: FETCH_METRICS, payload: res.data });
 };
 
 export const fetchOrder = id => async dispatch => {

@@ -27,6 +27,7 @@ class OrderUpdate extends Component {
                 );
               }}
               className="btn left  blue lighten-1"
+              style={{ marginTop: "20px" }}
             >
               RECIEVED
             </a>
@@ -39,6 +40,7 @@ class OrderUpdate extends Component {
                 );
               }}
               className="btn right  orange darken-3"
+              style={{ marginTop: "20px" }}
             >
               DELIVERED
             </a>

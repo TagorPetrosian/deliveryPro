@@ -88,4 +88,31 @@ module.exports = app => {
       res.status(422).send(err);
     }
   });
+
+  app.get("/admin/api/metrics", requireLogin, async (req, res) => {
+    try {
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const newOrders = await Order.find({
+        dateOrdered: { $gte: today }
+      });
+      const recievedOrders = await Order.find({
+        dateRecieved: { $gte: today }
+      });
+
+      const deliveredOrders = await Order.find({
+        dateDelivered: { $gte: today }
+      });
+
+      const metrics = {
+        newOrders: newOrders.length,
+        recievedOrders: recievedOrders.length,
+        deliveredOrders: deliveredOrders.length
+      };
+
+      res.send(metrics);
+    } catch (err) {
+      res.status(422).send(err);
+    }
+  });
 };

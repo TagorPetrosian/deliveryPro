@@ -7,6 +7,7 @@ import trucksReducer from "./trucksReducer";
 import driversReducer from "./driversReducer";
 import zonesReducer from "./zonesReducer";
 import schedulesReducer from "./scheduleReducer";
+import metricsReducer from "./metricsReducer";
 
 export default combineReducers({
   auth: authReducer,
@@ -18,5 +19,6 @@ export default combineReducers({
   zones: zonesReducer,
   schedules: schedulesReducer,
   schedule: schedulesReducer,
-  order: ordersReducer
+  order: ordersReducer,
+  metrics: metricsReducer
 });
