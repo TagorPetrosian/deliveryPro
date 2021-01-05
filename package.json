@@ -15,7 +15,7 @@
   "dependencies": {
     "@google/maps": "^0.5.5",
     "@types/materialize-css": "^1.0.4",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.1",
     "cookie-session": "^2.0.0-beta.3",
